@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <style type="text/css">
+        body
+        {
+            margin:0;
+            padding:0;
+            font-family:'Verdana', sans-serif;
+            font-size:10px;
+        }
+
+
+        a img
+        {
+            border:none;
+        }
+
+
+        div#outer
+        {
+        /* 1px border means content area must be
+              2px smaller than total size */
+            width:118px;
+            height:88px;
+            border:1px solid #000000;
+            background-color:#ffffff;
+            margin:0;
+            padding:0;
+            position:relative;
+        }
+
+
+        div#logo
+        {
+            position:absolute;
+            bottom:0;
+            background-color:#000000;
+            width:118px;
+            height:36px;
+            padding:0 0;
+            border:none;
+            text-align:center;
+            overflow:hidden;
+        }
+
+
+        div#logo a
+        {
+            color:#ffffff;
+            position:relative;
+            left:-3px;
+        }
+
+
+        form
+        {
+            margin:0;
+            padding:0 5px;
+            white-space:nowrap;
+        }
+
+
+        form p
+        {
+            margin:5px 0;
+            font-weight:bold;
+        }
+
+
+        form input#field-keywords
+        {
+            width:77px;
+            position:absolute;
+            top:0;
+            left:0;
+        }
+
+
+        form input#button
+        {
+            position:absolute;
+            top:0;
+            right:0;
+        }
+    </style>
+    <script type="text/javascript">
+        var config = new function() {
+            this.linkCode = getLinkCode();
+            this.campaign = getCampaign();
+            this.ccmid = getCreativeId();
+            this.orgUnit = '1';
+            this.defaultTag= 'widgetsamazon-20';
+			this.protocol= window.location.protocol;
+            this.mediaServerPrefix = this.protocol === 'https:' ? 'https://images-na.ssl-images-amazon.com' : 'http://rcm-images.amazon.com';
+            this.amazonURL= this.protocol + '//www.amazon.com/';
+            this.logoImageURL = this.mediaServerPrefix + '/images/G/01/associates/build-links/searchbox-logo-126x32.gif';
+            this.goButtonURL = this.mediaServerPrefix + '/images/G/01/associates/build-links/ap-search-go-btn.gif';
+            this.recordImpressionURL = this.protocol + '//www.assoc-amazon.com';
+            this.logoHeight ='36';
+            this.logoWidth = '126';
+        };
+
+        function getLinkCode() {
+            var partner = getPartner();
+            return partner == 'Blogger' ? 'bsw' : 'wsw';
+        }
+
+        function getCampaign() {
+            var partner = getPartner();
+            return partner == 'Blogger' ? '213689' : '212361';
+        }
+
+        function getCreativeId() {
+            var partner = getPartner();
+            return partner == 'Blogger' ? '392985' : '392009';
+        }
+
+        function getPartner() {
+            var queryParams = getQueryParams();
+            return queryParams["Partner"] ? queryParams["Partner"] : null;
+        }
+
+        function getQueryParams() {
+            var queryParams = new Array();
+            var currentURL = document.location.href;
+            if (currentURL) {
+                var pathParameters = currentURL.split("?");
+                if(pathParameters[1]) {
+                    var nameValuePairs = pathParameters[1].split("&");
+                    for (var i = 0; i < nameValuePairs.length; i++) {
+                        var nameValue = nameValuePairs[i].split("=");
+                        var name = nameValue[0];
+                        queryParams[name] = nameValue[1];
+                    }
+                }
+            }
+            return queryParams;
+        }
+
+        function getTag() {
+            var queryParams = getQueryParams();
+            return queryParams["t"] ? queryParams["t"] : config.defaultTag;
+        }
+
+       function drawLogo() {
+            document.write("<a href='" + config.amazonURL + "?&tag=" + getTag()
+                    + "&camp=" + config.campaign + "&creative=" + config.ccmid + "&linkCode=" + config.linkCode +"&' target='_top'>"
+                    + "<img src='" + config.logoImageURL +"' "
+                    + "height='" +config.logoHeight + "' width='" + config.logoWidth + "' alt='Amazon Logo'/></a>");
+        }
+
+        function writeFields() {
+            document.write("<form action='" + config.amazonURL + "s/' method='get' name='search' target='_top'>");
+            document.write("<input type='hidden' name='tag' value='" + getTag() + "'/>");
+            document.write("<input type='hidden' name='creative' value='" + config.ccmid + "'/>");
+            document.write("<input type='hidden' name='campaign' value='" + config.campaign + "'/>");
+            document.write("<input type='hidden' name='link_code' value='" + config.linkCode + "'/>");
+        }
+
+        function recordImpression() {
+            document.write("<img style='display:none ; border: medium none ; width: 1px; height: 1px;' "
+                    + "src='" + config.recordImpressionURL + "/e/ir?o=" + config.orgUnit + "&t=" + getTag() + "&l=" + config.linkCode + "&camp=" + config.campaign
+                    + "&creative=" + config.ccmid + "'/>");
+         }
+
+        function drawGoButton() {
+            document.write("<input id='button' type='image' value='Go' name='Submit' src='" + config.goButtonURL + "' alt='[Go]'/>");
+        }
+    </script>
+
+</head><body>
+<div id="outer">
+        <script type="text/javascript">
+            writeFields();
+        </script><form action="http://www.amazon.com/s/" method="get" name="search" target="_top"><input name="tag" value="gamwitjob-20" type="hidden"><input name="creative" value="392009" type="hidden"><input name="campaign" value="212361" type="hidden"><input name="link_code" value="wsw" type="hidden">
+        <input name="_encoding" value="UTF-8" type="hidden">
+        <input name="search-alias" value="aps" type="hidden">
+
+        <p>Search Amazon:</p>
+
+        <div style="position: relative; width: 108px;">
+            <input id="field-keywords" name="field-keywords" size="8" type="text">
+            <script type="text/javascript">
+                drawGoButton();
+            </script><input id="button" value="Go" name="Submit" src="searchbox_20_data/ap-search-go-btn.gif" alt="[Go]" type="image">
+        </div>
+    </form>
+    <script type="text/javascript">
+        recordImpression();
+    </script><img style="border: medium none ; display: none; width: 1px; height: 1px;" src="searchbox_20_data/ir.gif">
+    <div id="logo">
+        <script type="text/javascript">
+            drawLogo();
+        </script><a href="http://www.amazon.com/?&amp;tag=gamwitjob-20&amp;camp=212361&amp;creative=392009&amp;linkCode=wsw&amp;" target="_top"><img src="searchbox_20_data/searchbox-logo-126x32.gif" alt="Amazon Logo" width="126" height="36"></a>
+    </div>
+</div>
+</body></html>

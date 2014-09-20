@@ -1,0 +1,1 @@
+document.write ('<A HREF="http://oascentral.warcry.com/RealMedia/ads/click_lx.ads/www.gamerswithjobs.com/560265659/Top/default/empty.gif/64663551546b77546d435541436c4562?x" target="_top"><IMG SRC="http://imagec14.247realmedia.com/RealMedia/ads/Creatives/default/empty.gif/0"  WIDTH=1 HEIGHT=1 ALT="" BORDER=0 BORDER="0"></A>');

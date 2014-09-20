@@ -1,0 +1,15 @@
+teUrl='http://te.kontera.com/ContentLink/ContentLink?publisherId=109800&layout=adlinks&sId=216&cb=1274676461&creative=L&cn=in';
+directAdsPrefetch=true;
+setMaxLinksOnPage(7);
+konaPostalCode="";
+pageTopicVector="";
+addContentLink(60,6007,'Gameplay',51,1,"","22727");
+addContentLink(147,352552,'puzzle%20game',125,1,"","22727");
+addContentLink(168,670397,'brain%20teasers',145,1,"","70487");
+addContentLink(571,5881,'game%20for%20PC',483,1,"","22727");
+addContentLink(684,353019,'Wii',576,1,"","22727");
+
+konaTweakMode=2162715;
+setKonaResults(1,1,"L|0|0|0|white|none&pRfr=http://gamerblips.dailyradar.com/story/push-puzzle/&dc_aff_id=");
+onKonaReturn(1);
+

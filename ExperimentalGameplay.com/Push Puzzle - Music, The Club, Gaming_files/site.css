@@ -1,0 +1,1991 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:400;}ol,ul {list-style:none;}caption,th {text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400;}q:before,q:after{content:'';}abbr,acronym {border:0;}
+.yui-navset-left .yui-nav li, .yui-navset-right .yui-nav li {margin:0 0 .25em;}
+.yui-navset-left .yui-nav, .yui-navset-right .yui-nav { width:6em; }
+.yui-navset-left { padding-left:6em; }
+.yui-navset-left .yui-nav li, .yui-navset-right .yui-nav li, .yui-navset-left .yui-nav li a, .yui-navset-right .yui-nav li a {display:block;}
+.yui-navset-left .yui-nav, .yui-navset-right .yui-nav { position:absolute; z-index:1; }
+.yui-navset-left .yui-nav { left:0; }
+#tab_set .yui-content {padding: 10px 10px 40px 10px;}
+#tab_set .loading {background-image:url(http://images.dailyradar.com/media/img/loading.gif);background-position:center center;background-repeat:no-repeat;}
+#tab_set .loading * {display:none;}
+.yui-navset .yui-nav li {margin-right:.5em;}
+.yui-nav, .yui-nav li {margin:0;padding:0;list-style:none;}
+.yui-nav li em { font-style:normal; }
+.yui-navset {position:relative;zoom:1;}
+#left_tab_set {margin: 10px;}
+.yui-navset .yui-content {zoom:1;padding:1em;}
+#tab_set.yui-navset .yui-content {border:1px solid #ccc;}
+#left_tab_set.yui-navset .yui-content {zoom:1;padding:0 0 0 2em;}
+.yui-navset .yui-nav li {display:inline-block;display:-moz-inline-stack;*display:inline;vertical-align:bottom;cursor:pointer;zoom:1;}
+.yui-navset .yui-nav a {outline:0;}
+.yui-navset .yui-nav a:hover {text-decoration: none;}
+.yui-navset .yui-nav a { position:relative; }
+#tab_set.yui-navset .yui-nav li a {display:block;display:inline-block;vertical-align:bottom;background: url(http://images.dailyradar.com/media/img/tab_inactive.png) no-repeat;zoom:1;}
+.yui-navset .yui-nav li a em {display:block;padding:.1em;font-weight:700;}
+#tab_set.yui-navset .yui-nav li a em {background: url(http://images.dailyradar.com/media/img/tab_inactive.png) no-repeat top right;}
+.yui-navset .yui-nav .selected a, .yui-navset .yui-nav a:hover {background-color:#fff;}
+.yui-navset-top .yui-nav { margin-bottom:-1px; }
+.yui-navset-top .yui-nav li a {border-bottom:1px solid #ccc;}
+#tab_set.yui-navset-top .yui-nav .selected a {border-bottom:0;background: url(http://images.dailyradar.com/media/img/tab_active_plain.png) no-repeat;}
+#tab_set.yui-navset-top .yui-nav .selected a em {padding-bottom:.2em;background: url(http://images.dailyradar.com/media/img/tab_active_plain.png) no-repeat top right;}
+
+.yui-navset-top .yui-nav li a em, .yui-navset-bottom .yui-nav li a em {margin-left:4px;padding-right:8px;padding-left:4px;}
+.yui-calcontainer {position:relative;padding:5px;background-color:#F7F9FB;border:1px solid #7B9EBD;float:left;overflow:hidden;}
+.yui-calcontainer iframe {position:absolute;border:none;margin:0;padding:0;left:-1px;top:-1px;z-index:0;width:50em;height:50em;}
+.yui-calcontainer.multi {padding:0;}
+.yui-calcontainer.multi .groupcal {padding:5px;background-color:transparent;z-index:1;float:left;position:relative;border:none;}
+.yui-calcontainer .title {font:100% sans-serif;color:#000;font-weight:700;margin-bottom:5px;height:25px;position:absolute;top:3px;left:5px;z-index:1;}
+.yui-calcontainer .close-icon {position:absolute;right:3px;top:3px;border:none;z-index:1;}
+.yui-calcontainer .calclose {background: url("http://images.dailyradar.com/media/img/icon/close.png") no-repeat;width:17px;height:13px;cursor:pointer;}
+
+.yui-calendar {font:100% sans-serif;text-align:center;border-spacing:0;border-collapse:separate;position:relative;}
+.yui-calcontainer.withtitle {padding-top:1.5em;}
+.yui-calendar .calnavleft, .yui-calendar .calnavleft:hover {position:absolute;background-repeat:no-repeat;cursor:pointer;top:2px;bottom:0;width:9px;height:12px;left:2px;z-index:1;background: url(http://images.dailyradar.com/media/img/yui/callt.gif) no-repeat;}
+
+.yui-calendar .calnavright, .yui-calendar .calnavright:hover {position:absolute;background-repeat:no-repeat;cursor:pointer;top:2px;bottom:0;width:9px;height:12px;right:2px;z-index:1;background: url(http://images.dailyradar.com/media/img/yui/calrt.gif) no-repeat;}
+
+.yui-calendar td.calcell {padding:.1em .2em;border:1px solid #E0E0E0;text-align:center;}
+.yui-calendar td.calcell a {text-decoration:none;}
+.yui-calendar td.calcell.oom {cursor:default;color:#999;background-color:#EEE;border:1px solid #E0E0E0;}
+.yui-calendar td.calcell.selected, .yui-calendar td.calcell.selected a {color:#fff;}
+.yui-calendar td.calcell.calcellhover {cursor:pointer;color:#FFF;}
+.yui-calendar td.calcell.calcellhover a {color:#FFF;}
+.yui-calendar td.calcell.restricted {text-decoration:line-through;}
+.yui-calendar td.calcell.previous {color:#CCC;}
+.yui-calendar td.calcell.highlight1 { background-color:#CF9; }
+.yui-calendar td.calcell.highlight2 { background-color:#9CF; }
+.yui-calendar td.calcell.highlight3 { background-color:#FCC; }
+.yui-calendar td.calcell.highlight4 { background-color:#CF9; }
+.yui-calendar .calhead {border:1px solid #E0E0E0;vertical-align:middle;background-color:#FFF;}
+.yui-calendar .calheader {position:relative;width:100%;text-align:center;}
+.yui-calendar .calheader img {border:none;}
+.yui-calendar .calweekdaycell {color:#666;font-weight:400;text-align:center;width:1.5em;}
+.yui-calendar .calfoot {background-color:#EEE;}
+.yui-calendar .calrowhead, .yui-calendar .calrowfoot {color:#666;font-size:9px;font-style:italic;font-weight:400;width:15px;}
+.yui-calendar .calrowhead {border-right-width:2px;}
+.yui-calendar a:hover {background:inherit;}
+p#clear {clear:left; padding-top:10px;}
+.yui-button {display:-moz-inline-stack;display:inline-block;border-width:1px 0;border-style:solid;_background-image:none;margin:auto .25em;}
+
+.yui-button .first-child {display:block;*display:inline-block;border-width:0 1px;border-style:solid;margin:0 -1px;*left:-1px;}
+.yui-button button, .yui-button a {display:block;display:-moz-inline-block;*display:inline-block;padding:.1em .5em;}
+.yui-button button {overflow:visible;font-size:100%;background-color:transparent;cursor:pointer;cursor:hand;color: #035FBD;}
+.yui-button a {text-decoration:none;color:#000;}
+.yui-split-button button, .yui-menu-button button {padding-right:20px;background-position:right center;background-repeat:no-repeat;}
+
+.yui-menu-button button {background-image:url(http://images.dailyradar.com/media/img/yui/menuarrow.gif);}
+.yui-split-button button {background-image:url(http://images.dailyradar.com/media/img/yui/splitarrow.gif);}
+.yui-button-focus, .yui-button-focus .first-child {border-color:#5e5c95;}
+.yui-button-focus button, .yui-button-focus a {border-color:#cec1fc;}
+.yui-button-hover {background-color:#ace;}
+.yui-button-hover button, .yui-button-hover a, .yui-button-hover a:hover {color: #000;text-decoration: none;}
+.yui-button-active .first-child {border-color:#7a8180;}
+.yui-button-active button, .yui-button-active a {border-color:#98a09f;}
+.yui-split-button-activeoption button {background-color:transparent;background-image:url(http://images.dailyradar.com/media/img/yui/splitarrow_active.gif);}
+
+.yui-radio-button-checked, .yui-checkbox-button-checked {background-color:#333;}
+
+.yui-radio-button-checked button, .yui-checkbox-button-checked button {border-color:#98a09f;}
+.yui-button-disabled {border-color:#cbcdc5;background:#ecece3;_filter:none;}
+
+.yui-button-disabled .first-child {border-color:#cbcdc5;}
+.yui-button-disabled button, .yui-button-disabled a {border-color:transparent;color:#b9b9b9;cursor:default;}
+
+#load_more_button .yui-button {width:100%; line-height:30px;background:url("http://images.dailyradar.com/media/img/button/background.png") transparent ;font-size:12pt;margin:3px 0 0 0;border-color: #CDCDCD;}
+#load_more_button .yui-button .first-child {border-color:#CDCDCD;}
+#load_more_button .yui-button a {color:#333;border:0;}
+#load_more_button {text-align:center;}
+#load_more_button .yui-button-hover, #load_more_button .yui-button-hover .first-child, #load_more_button .yui-button-hover button, #load_more_button .yui-button-hover a, #load_more_button .yui-button-hover a:hover {border-color:#999;}
+#load_more_button .yui-button-hover {background-color:#ccc;}
+
+.yui-overlay {position:absolute;display:block;}
+* html body.masked select {visibility:hidden;}
+* html div.yui-panel-container select {visibility:inherit;}
+* html div.drag select, * html div.hide-select select {visibility:hidden;}
+.mask {z-index:0;display:none;position:absolute;top:0;left:0;-moz-opacity: .5;opacity:.50;filter: alpha(opacity=50);background-color:#CCC;}
+.hide-scrollbars * {overflow:hidden;}
+.hide-scrollbars textarea, .hide-scrollbars select {overflow:hidden;display:none;}
+.show-scrollbars textarea, .show-scrollbars select {overflow:visible;}
+.yui-panel-container {position:absolute;background-color:transparent;z-index:6;visibility:hidden;overflow:visible;width:auto;}
+.yui-panel-container.matte {padding:3px;background-color:#FFF;}
+.yui-panel-container.matte .underlay {display:none;}
+.yui-panel-container.shadow {padding:0;background-color:transparent;}
+.yui-panel-container.shadow .underlay {visibility:inherit;position:absolute;background-color:#CCC;top:3px;left:3px;z-index:0;width:100%;height:100%;filter:alpha(opacity=70);zoom:1;}
+.yui-panel {visibility:hidden;border-collapse:separate;position:relative;left:0;top:0;font-size: 13pt;background-color:#FFF;border:1px solid #000;z-index:1;overflow:hidden;padding: 15px;text-align: center;}
+.yui-panel .hd {display:none;}
+.yui-panel .bd {overflow:hidden;padding:4px;}
+.yui-panel .bd p {margin:0 0 1em;}
+.yui-panel .container-close {position:absolute;top:5px;right:4px;z-index:6;height:12px;width:12px;margin:0;padding:0;cursor:pointer;visibility:inherit;}
+.yui-panel .ft {padding:4px;overflow:hidden;}
+#add_module.yui-panel, #filter_panel.yui-panel, #region_panel.yui-panel, .media-panel.yui-panel {border:1px solid #000; overflow:visible;padding: 20px;text-align: center;padding: 0;font-size: 100%;text-align: left;}
+#add_module.yui-panel .container-close, #filter_panel.yui-panel .container-close, #region_panel.yui-panel .container-close, .media-panel.yui-panel .container-close{top:2px;right:2px;height:17px;width:17px;background-image:url(http://images.dailyradar.com/media/img/icon/close.png);}
+#add_module.yui-panel .hd, #filter_panel.yui-panel .hd, #region_panel.yui-panel .hd, .media-panel.yui-panel .hd {text-align: left;padding:5px;border:none;color: #fff;margin: 0;overflow:visible;font-weight: 700;display: block;}
+#region_panel.yui-panel .bd, #filter_panel.yui-panel .bd {background-color: #FFF; border: 0; overflow: hidden;}
+#add_module.yui-panel .bd {border: 0; background-color: #FFF; padding: 0; overflow: hidden;}
+.media-panel.yui-panel .bd {border: 0; overflow: hidden;}
+#filter_panel.yui-panel .bd, #region_panel.yui-panel .bd {padding:5px;}
+.media-panel.yui-panel .bd {padding:3px;text-align: center;background-color: #eee;}
+.media-panel.yui-panel .ft {background-color: #eee;}
+.media-panel .media-player {padding: 0;}
+.picks-panel.yui-panel .bd {background-color: #fff;}
+.yui-simple-dialog .bd .yui-icon {background-repeat:no-repeat;width:16px;height:16px;margin-right:10px;float:left;}
+.yui-dialog .ft, .simple-dialog .ft {padding-bottom:5px;padding-right:5px;text-align:right;}
+.yui-dialog form, .yui-simple-dialog form {margin:0;}
+.button-group button {font:100 76% verdana;text-decoration:none;background-color: #E4E4E4;color: #333;cursor: hand;vertical-align: middle;border: 2px solid #797979;border-top-color:#FFF;border-left-color:#FFF;margin:2px;padding:2px;}
+.button-group button.default {font-weight:700;}
+.button-group button:hover, .button-group button-hover {border:2px solid #90A029;background-color:#EBF09E;border-top-color:#FFF;border-left-color:#FFF;}
+.button-group button:active {border:2px solid #E4E4E4;background-color:#BBB;border-top-color:#333;border-left-color:#333;}
+#yui-history-iframe {position:absolute;top:0; left:0;width:1px; height:1px;visibility:hidden;}
+html {height: 100%;}
+html * {padding:0;margin:0;}
+body {height: 100%; background: #fff; color: #333; font: 13px Arial, Verdana, Helvetica, sans-serif; text-align: center;}
+#wrapper {margin: 0 auto; text-align: left;}
+#ftwrapper {position: relative;margin: -150px auto 0 auto;text-align:center;height:150px;clear:both;width:960px;font-size: 12px;font-weight: bold;}
+#ftwrapper li {line-height:16px;}
+.clearer {clear: both;display: block;height: 1px;margin-bottom: -1px;font-size: 1px;line-height: 1px;}
+.clear-right {clear:right;}
+.clear-left {clear:left;}
+.clear-both {clear:both;}
+#content-bottom {clear: both;display: block;height: 150px;}
+em {font-style:italic;}
+strong {font-weight: 700;}
+td, th {padding: 5px;margin: 0;}
+td.numeric, th.numeric {text-align: right;}
+table.stats {background: #eee;border: 1px solid #ccc;width: 99%;}
+table.stats td {padding: 2px;font-size: 85%;}
+table.stats th {padding: 5px;text-align: center;color: #fff;}
+table.scoreboard {border: 1px solid #eee;margin-bottom: 15px;width: 99%;}
+table.scoreboard:hover {background: #F5F5F5;border: dotted silver 1px;}
+table.odds {border: 1px solid #eee;float: left;margin: 5px;width: 47%;}
+table.odds:hover {background: #F5F5F5;border: dotted silver 1px;}
+table.odds td {padding: 2px;}
+table.odds .selectedPick {width: 34px; border: 1px solid #fff; height: 34px;}
+table.odds .nonPick {width: 34px; height: 34px;}
+table.odds .notPicked {width: 34px; border: 1px solid #fff; height: 34px;}
+table.odds .selectedPick a, table.odds .nonPick a {width: 34px;height: 34px;display: block;}
+table.odds .selectedPick {background: #fff url("http://images.dailyradar.com/media/img/game/pick_lg_sprite.gif") no-repeat 5px 5px;}
+table.odds .nonPick {background: #fff url("http://images.dailyradar.com/media/img/game/pick_lg_sprite.gif") no-repeat 5px -58px;border: 1px solid #D4D4D4;}
+table.odds .nonPick:hover {background: #eee url("http://images.dailyradar.com/media/img/game/pick_lg_sprite.gif") no-repeat 5px -27px;}
+p, ul {margin-bottom: 10px;}
+p.spaced {line-height:1.3em;}
+ul {list-style-type: disc;list-style-position: inside;line-height: 21px;}
+table.comment-header {background-color: #eee;width: 100%;border-bottom: 1px solid #ccc;}
+table.comment-header td {padding: 0 5px 0 0;}
+ul.bullets {text-indent: -1em;}
+a {text-decoration: none;}
+a img {border: none;}
+a:hover, a.external:hover  {text-decoration: underline;}
+h1 {text-transform: uppercase;font-size:21px;margin-bottom:.2em;line-height:1.2em;font-weight:700;color:#666;padding-bottom:2px;padding-top: 5px;}
+h1 a {text-transform: none;}
+h1 a:hover, h1 a.external:hover {text-decoration: none;}
+h2 {font-size:145%;font-weight:700;margin:15px 0 3px 0;color:#363636;}
+h3 {font-size:140%;font-weight:700;margin:15px 0 3px 0;color:#363636;}
+.yui-content h3 {font-size:140%;font-weight:700;margin:0 0 3px 0;color:#363636;}
+h4 {color:#363636;}
+div.story-head {margin-bottom: 4px; margin-top: 1.2em;}
+h4 {font-size: 1.3em; margin-bottom: 4px; font-weight: 700; margin-top: 1.2em;}
+.content-box h4, content-box div.story-head {margin-top:.2em;}
+h4 a:link, h4 a.external:link, h4 a:visited, h4 a.external:visited, div.story-head a:link, div.story-head a.external:link, div.story-head a:visited, div.story-head a.external:visited{border-bottom: 1px solid #fff;}
+h4 a.external:hover, h4 a:hover {text-decoration: none;}
+h5 {font-weight:700;margin-bottom:3px;margin-top:1.2em;border-bottom:2px solid #eee;}
+.h5tag {float: right;margin-top: -20px;}
+h6 {font-weight:700;margin-bottom:3px;margin-top:1.2em;}
+input {font-size: 16px; font-family: arial, helvetica, sans-serif; color: #333; padding: 1px;}
+textarea {font-size: 16px; font-family: arial, helvetica, sans-serif; color: #333; width: 420px;padding: 4px;}
+.entity-list td {width: 110px;}
+.entity-list td.thumb {width: 44px;}
+.entity-list h2 {margin: 0;font-weight: 500;font-size: 100%;}
+.pagination {text-align: center;}
+.tc1, .tc2, .tc3, .tc4, .tc5, .tc6, .tc7, .tc8, .tc9, .tc10 {color: #666;}
+.tc1 {font-size: 10px;}
+.tc2 {font-size: 11px;}
+.tc3 {font-size: 12px;}
+.tc4 {font-size: 13px;}
+.tc5 {font-size: 14px;}
+.tc6 {font-size: 16px;}
+.tc7 {font-size: 18px;}
+.tc8 {font-size: 20px;}
+.tc9 {font-size: 22px;}
+.tc10 {font-size: 24px;}
+.center {text-align: center;}
+.comment, .comment-preview {border: 1px #ccc solid;margin-right: 12px;margin-bottom: 12px;margin-top: 12px;}
+.comment-preview {background-color: #eee;}
+#sidebar .comment {padding: 0 3px;}
+.comment-ajax {list-style-type:none;list-style-position: outside;}
+.comment_list {list-style-type:none;padding-left: 18px;list-style-position: outside;}
+.comment-container {margin-left: -18px;}
+.comment-button {margin-left: 18px;}
+.code {clear: both;font-family: courier, fixed;font-size: 90%;border: 1px #ccc solid;background: #eee;padding: 5px;width: 350px;height: 150px;}
+.icon, .featicon {vertical-align: middle;}
+.thumb {margin: 2px 4px;vertical-align: middle;}
+a img.thumb, a img.icon {border: 1px #ccc solid;}
+.avatar {border: 1px #ccc solid;margin: 5px 10px;}
+.icon-winner {vertical-align: middle;}
+.thumb-winner {margin: 1px 3px;vertical-align: middle;}
+a:hover img.thumb-winner, a:hover img.icon-winner {border: 2px #ccc dotted;}
+.avatar-winner {margin: 4px 9px;}
+input.submit {margin:auto .25em;border-width:1px;border-style:solid;margin:0 -1px;overflow:visible;font-size:140%;cursor:pointer;cursor:hand;padding: 4px;}
+#left_tab_set input.submit {font-size:115%;margin: 5px;}
+#left_tab_set input.submit:hover {border-color:#999;}
+div.summary, td.summary, p.summary {max-width: 535px; margin-bottom: 0; overflow: hidden;}
+div.sidebar-post-group div.comment div.summary {width: 98%;}
+div.comment-body {line-height: 21px;margin-bottom: 0;overflow:hidden;padding: 5px;width: 98%;}
+div.comment-meta {float: right;font-size: 90%;margin-right: 5px;}
+div.comment-summary {overflow:hidden;border: 1px solid silver;margin: 0 10px 10px 0;padding: 5px;width: 98%;}
+p.tag, p.share  {font-size:80%;margin-bottom:0;}
+p.tag-label {font-size:80%;display:inline;font-weight: 700;padding-right: 10px;}
+h3.tag {padding-right: 10px;}
+p.share  {margin-top:4px;}
+.story-link {padding-bottom: 5px;font-weight: 700;}
+span.tag {padding-right: 10px;}
+p.share span.tag a{border: 1px solid #ddd;padding: 1px 3px;}
+p.share span.tag a:hover{text-decoration: none;}
+.post-links-container {font-size:80%;margin-bottom:5px;}
+p.post-links-label {display:inline;font-weight: 700;padding-right: 10px;}
+.post-links-link {margin-left:20px}
+h4.story-title {font-size: 100%; margin: 0;font-weight: 500;display:inline;}
+.yui-tt .bd{position:relative;top:0;left:0;z-index:1;color:#333;padding:2px 5px;border-color:#FCC90D #D4C20D #D4C20D #D4C20D;border-width:1px;border-style:solid;background-color:#FDFFB4;font-size:100%;text-align: left;}
+.yui-tt-shadow{overflow:auto;position:absolute;top:2px;right:-2px;left:-2px;bottom:-2px;background-color:#000;}
+.yui-tt-shadow-visible{opacity:.12;*filter:alpha(opacity=12);}
+img.heading {margin-bottom:15px;}
+img#logo {margin:0;border:none;}
+#footer {margin:0 auto;width:930px;padding: 0;text-align: center;}
+#footer table{margin: 10px auto;}
+#footer td {text-align: left;padding:0px 40px;vertical-align:top;}
+#footer ul {list-style-type:none;list-style-position: outside;margin:1px;}
+#footer p {margin:1px;}
+.navLoginSpacer, .navGuestSpacer {height: 100px;}
+#nav-user {text-align: right; margin-top: 0; line-height: 21px;}
+#nav-user a {text-decoration: underline;}
+#content {margin-bottom: 10px;}
+#primary {position: relative;}
+#sidebar {margin-left: 610px;}
+div.stry {clear: both; margin-bottom: 25px;}
+div.stry h6 {margin: 0 0 4px 0;}
+div.hype-it {margin:5px 10px 10px 0;float:left;}
+
+p.unranked-story-meta, p.story-meta {font-size:80%;color:#444;margin-bottom: 0;}
+p.story-meta {margin:-3px 0 0 0;}
+table.view-story-meta td {font-size:110%;color:#444;padding: 0 0 2px 0;}
+.h2tag, .h4button {float: right;margin-top: -22px;}
+table.h1table {width:99%;margin-bottom:.2em;}
+table.h1table h1 {border-bottom:0;margin-bottom:0;padding-bottom: 0;}
+table.h1table td {padding:0;margin:0;vertical-align:bottom;}
+table.h1table td.button {text-align:right;}
+table.h1table td.button .jsButton {margin:auto 2px 2px 5px;min-width:100px;text-align:center;}
+table.h1table td.site-midsize {width: 65px;padding-bottom: 2px;}
+p.doublesortby {text-align:right;margin-top:-22px;margin-bottom:2px;color:#666;}
+p.sortby {text-align:right;margin-top:-22px;margin-bottom:20px;color:#666;}
+form.sortby {text-align:right;margin-top:-35px;margin-bottom:20px;color:#666;}
+.mceEditor tbody td {padding: 0;}
+.error {margin-bottom: 5px;background-color: #fff;font-weight: 700;padding: 5px;font-size: 120%;}
+.error a {text-decoration: underline;}
+div.form {background: #eee;padding: 10px;margin-top: 20px;float: left;margin-left: 20px;}
+div.form td.label {text-align:right;}
+div.form td.label .smaller {font-size:90%;}
+div.form .fine-print {font-size:90%; color:#666666;}
+.helpText {color: #666;font-size: 75%;}
+
+th {font-weight: 700;}
+.section-description {font-size: 90%;margin-top: -15px;}
+#nav-user a.highlight, #nav-user a.highlight:visited {text-decoration: none;background-color: #fff;padding: 2px;}
+#nav-user a.highlight:hover {text-decoration: underline;}
+#acInputContainer {position:relative;text-align: right}
+#searchInput {position:relative;font-size: 13px;font-weight: 700;font-family: Arial,Helvetica,Sans Serif;}
+#acContainer {position:absolute;left:0;top:1em;display:inline;font-size: 13px;font-weight: 400;}
+#acContainer .yui-ac-content {position:absolute;left:0;top:0;border:1px solid #CCC;background:#fff;overflow:hidden;text-align:left;z-index:9050;width: 175px;}
+#acContainer .yui-ac-shadow {position:absolute;left:0;top:0;margin:.3em;background:#a0a0a0;z-index:9049;}
+#acContainer ul {list-style-type: none;width:100%;margin-left: 2px;padding-left: 2px;}
+#acContainer li {white-space:nowrap;border-bottom: 1px solid silver}
+#acContainer .highlight {font-weight: 700;}
+#acContainer .meta {font-size: 80%;margin-left: 20px;}
+.autoCompleteHighlight {font-weight: 700;cursor: pointer;cursor: hand;color: #fff;}
+#tagFindInputContainer {position:relative;}
+#center input.submit, #sidebar input.submit, .groupUserTable input.submit, input.smaller {font-size: 110%;}
+#center input.submit {margin-top: 2px;}
+#tagFindInputContainer input.submit, #tagFindInputContainerSearch input.submit {padding: 1px 5px;}
+#tagFindInputContainer input.submit {font-size: 90%;font-weight: 700;}
+#tagFindInput, #tagFindInputSearch {position:relative;font-family: Arial,Helvetica,Sans Serif;}
+#tagFindInput {font-size: 90%;width: 180px;color: #999;}
+#tagFindInputSearch {font-size: 140%;width: 370px;font-weight: 700;}
+#tagFindContainer, #tagFindContainerSearch {text-align: left;position:absolute;left:0;top:1em;display:inline;font-size: 13px;font-weight: 400;}
+#tagFindContainer .yui-ac-content, #tagFindContainerSearch .yui-ac-content {position:absolute;left:0;top:0;border:1px solid #CCC;background:#fff;overflow:hidden;text-align:left;z-index:9050;width: 215px;}
+#tagFindContainer .yui-ac-shadow, #tagFindContainerSearch .yui-ac-shadow {position:absolute;left:0;top:0;margin:.3em;background:#a0a0a0;z-index:9049;}
+#tagFindContainer ul, #tagFindContainerSearch ul {list-style-type: none;width:100%;margin-left: 2px;padding-left: 2px;}
+#tagFindContainer li, #tagFindContainerSearch li {white-space:nowrap;border-bottom: 1px solid silver;}
+#tagFindContainer .highlight, #tagFindContainerSearch .highlight {font-weight: 700;}
+#tagFindContainer .meta, #tagFindContainerSearch .meta {font-size: 80%;margin-left: 20px;}
+.big {font-size:140%;}
+.existingPicks {margin-left: 15px;font-size: 85%;font-weight: 400;}
+.watch-action {font-size: 85%;}
+.teamName {width: 200px;}
+.answerName {width: 100%;}
+.customColumnNarrow .teamName, .customColumnBalanced .teamName {width: 100px;}
+.entityThumb {border: 1px solid silver;}
+.entityLogo {padding: 2px;border: 1px solid silver;background-color: #fff; margin: 0 0 5px;}
+.winner {font-weight: 700;}
+.selectedPick, .selectedPickWinner, .selectedPickLoser, .nonPick, .unselectedPickWinner {width: 26px;height: 26px;}
+.selectedPick a, .selectedPickWinner a, .selectedPickLoser a, .nonPick a, .unselectedPickWinner a {width: 26px;height: 26px;display: block;}
+.selectedPickWinner {border: 1px solid #3c3;background-color: #eee;}
+.selectedPickLoser {border: 1px solid #f33;background-color: #eee;}
+.unselectedPickWinner {border: 1px solid #3c3;}
+.nonPick {border: 1px solid #D4D4D4;}
+
+
+.voteUpPost {width: 28px;height: 33px;}
+.voteUpPost a {display: block;width: 28px;height: 33px;}
+.voteUpSelected, .voteUp {width: 14px;height: 16px;float: right;margin: 1px;}
+.voteUpSelected a, .voteUp a {display: block;width: 16px;height: 16px;}
+.voteDownSelected, .voteDown {width: 14px;height: 16px;float: right;margin: 1px;}
+.voteDownSelected a, .voteDown a {display: block;width: 16px;height: 16px;}
+.siteicon {vertical-align:middle;border: 0;}
+.sidebar-post-group .siteicon,.watch .siteicon {vertical-align: bottom;}
+.headerFind {margin-left: 50px; margin-top: -85px;}
+#header-submit {clear: right;margin-left: 50px;float: right;margin-top: -60px;}
+#header-submit span.jsButton {font-size: 90%;font-weight: 700;margin-right: 0px;}
+#welcome_box {background:#fff;border: 1px solid #ccc;padding: 0; overflow: hidden;width:335px;}
+#welcome_box_inner {padding: 10px;}
+#welcome_box h1 {padding:0;margin:0;border:0;letter-spacing: 0em;font-weight: 700;font-size: 200%;color:#666;}
+#welcome_box h2 {padding:0;margin:0;border:0;}
+#welcome_box h3 {padding:0;margin:0 0 10px 0;border:0;font-weight: 400;}
+#welcome_box ul {list-style-type:none;font-size: 120%;margin-left: 15px;}
+#welcome_box h2 {text-transform: uppercase;}
+#welcome_box a {text-transform: uppercase; font-size: 12px;font-weight: bold;}
+.formerror {float: left;padding:4px 5px 4px 25px;margin:0;border:1px solid red;color:red;background:#ffc url(http://images.dailyradar.com/media/img/icon/error.gif) 5px .3em no-repeat;}
+.sortHandle {cursor:move;font-weight: 700;font-size: 120%;padding: 3px;width: 99%;}
+.sortHandle:hover {background: #eee;}
+.sortHandle a {color: #666;}
+.sortHandle a:hover {color: #000;}
+.sortListBoundary {height: 50px;visibility:hidden;}
+.dragged {border:1px dashed red;color:#fff;margin: 10px;}
+.dragged .sortBody {opacity: .1;filter: alpha(opacity=10);}
+.sortList {border: 1px solid #ccc;text-align: left;padding: 0;}
+.sortListWrapper {margin: 10px;border-right: 2px solid #666;border-bottom: 2px solid #666;}
+.customColumnBalanced, .customColumnWide, .customColumnNarrow {vertical-align: top;}
+.customColumnBalanced {width: 467px;}
+.customColumnWide {width:585px;}
+.customColumnNarrow {width: 347px;}
+.customColumnNarrow .wide, .customColumnBalanced .wide, .customColumnNarrow .balanced {display:none;}
+.ellipses {display:none;}
+.sortBody {margin: 5px;}
+#south {padding: 5px;text-align: center;vertical-align: middle;font-size: 130%;font-weight: 400;}
+#layoutbuttons {float: right;}
+.moduleMenuItem select {width: 130px;}
+.moduleMenuItem {width: 135px;height: 165px;border: 1px solid silver;padding: 5px;}
+.moduleMenuItemWrapper {margin: 5px;border-right: 2px solid #666;border-bottom: 2px solid #666;float: left;}
+.moduleMenuItem h2 {font-size: 14px;font-weight: 700;margin: 0;border: 0;padding: 0;}
+.moduleMenuItem .body {height: 105px;}
+.moduleMenuItem .footer {height: 45px;text-align: center;}
+.right {float: right;}
+.left {float: left;}
+.componentFooterLeft {float: left;padding: 2px 5px;font-size: 85%;}
+.componentFooterRight {float: right;padding: 2px 5px;font-size: 85%;}
+.loading {padding: 20px;}
+.panelBorder {background-color: #eee;padding: 5px;}
+.tabsetWrapper {background-color: #fff;border: 1px solid #ccc;padding: 5px;}
+.widget {float: left;text-align:left;position:relative;margin-right: 5px;font-size: 100%;width: 56px;}
+.widget-vote {margin-bottom: 5px;}
+.widget-vote-up, .widget-vote-down {width: 42px;margin-left: 5px;}
+.widget-vote-up {height: 36px; border-bottom: 1px solid #FFEB7C;}
+.widget-vote-up img {float: left;margin-top: -2px;}
+.widget-vote-down img {float: left;}
+.widget-vote-down {height: 23px;}
+.widget-vote-up .vote-count {padding:15px 0 0 0;font-size:115%;}
+.widget-vote-down .vote-count {padding:1px 0 0 0;color:#666;font-size:100%;}
+.widget-vote-up .vote-arrow {margin: 0px -6px 0 -4px;}
+.widget-vote-down .vote-arrow {margin: 3px -6px 0 -4px;}
+.widget-vote-hover {cursor:pointer;cursor:hand;}
+
+.widget-meta {text-align: left;height:22px;border:0;line-height:18px;position:relative;margin: 0 0 0 4px;font-size: 90%;clear: both;width: 42px; font-weight: bold;}
+.widget-meta a {display: block;color: #333;}
+.widget-meta a:hover {text-decoration: none;color: #000;}
+.widget-meta img {float: left;margin-top: 4px;margin-left: 3px;margin-right: 6px;}
+.no-top-border {border-top: 0;}
+.post-data {position: relative;min-height: 50px;margin-left: 61px;}
+.post-data h4, .post-data div.story-head {margin-top: 0;}
+.post-data-ad {margin: 0 0 15px 61px;}
+.form ul {list-style-type:none;padding-left: 5px;list-style-position: outside;line-height: 10pt;}
+.form ul li {padding: 5px;}
+.contestTable {width: 98%;}
+.quote {border: 1px #ccc dashed;padding: 2px;margin: 2px;overflow:hidden;}
+.contestTable .quote {width:245px;}
+#quote_module textarea {width: 300px;height: 100px;}
+table.sidebarFriends {width: 100%;font-size: 85%;}
+table.sidebarFriends td {text-align: center;vertical-align: top;width:25%;}
+table.sidebarFriends td div {width: 72px;overflow:hidden;}
+table.explodedTable {border-spacing: 10px;border-collapse: separate;}
+.explodedTable td {vertical-align: top;border: 1px solid silver;margin: 0 10px 10px 0;padding: 5px;}
+table.groupUserTable {border-spacing: 10px;border-collapse: separate;}
+.groupUserTable td {vertical-align: top;text-align: center;border: 1px solid silver;margin: 0 10px 10px 0;padding: 5px;width: 135px;}
+.aboutGroup {border: 1px solid silver;background-color: #e9e9e9;padding: 5px;}
+blockquote {margin-left: 25px;border-left: solid silver 4px;padding-left: 8px;}
+#submitButton, #seriesPickButton {font-size: 140%;}
+.sidebarUser {border: solid 1px #ccc;}
+.sidebarUser .links {padding: 2px 5px;text-align: center;font-size: 90%;font-weight: 700;vertical-align: middle;letter-spacing: .01em;margin-bottom: 2px;}
+.sidebarUser .header {background: url("http://images.dailyradar.com/media/img/user_sidebar_header.png"); vertical-align: middle;}
+.sidebarUser .header h3, .sidebarUser .header b {margin: 0;}
+.sidebarUser .header .right {margin-top: 2px;}
+.sidebarUser .blog-post, .content-callout .blog-post {margin-bottom: 10px; font-size: 90%;}
+.sidebarUser .insideSidebarUser {margin-top:10px;}
+#primary .sidebarUser {margin-left: 18px;}
+.sidebarRelated {background-color: #f9f9f9; border: solid 1px #ccc; padding: 5px;}
+.sidebarRelated .header {margin-top: 15px;font-weight: 700;}
+.sidebarRelated .first, .sidebarUser .first {margin-top: 0;}
+.sidebarUsername {font-weight: 700; font-size: 140%;}
+.sidebarRelated ul, .sidebarRelated ul li {margin: 0;padding: 0;}
+.stickyNotes .comment {background-color: #FEFFC1;}
+#addcontent {font-weight: 700;}
+.jsButton a, .jsButton a:visited {padding:.2em .6em;min-height: 16px;display: block;white-space:nowrap;font-weight:normal;}
+.nopadButton a, .nopadButton a:visited {padding:.05em .5em;}
+.jsButtonColumn {width: 150px;}
+.jsButtonColumn a {width: 135px;}
+#optionalRegistration, #createPostURL, #optionTable {visibility:hidden;height: 0;}
+#charsRemaining {font-weight: 700;}
+table.profileSummaryTable {border-spacing: 10px;border-collapse: separate;width: 100%;}
+.profileSummaryTable td {vertical-align: top;}
+.profileSummaryTable td.box {text-align: center;margin: 0 10px 10px 0;padding: 5px;width: 25%;}
+.profileSummaryTable td.header {margin-top: 10px;background:url("http://images.dailyradar.com/media/img/user_sidebar_header.png");padding: 2px 5px;border: solid 1px #ccc;vertical-align: middle;}
+.profileSummaryTable td.header b {font-size: 115%;}
+.profileSummaryTable td.header .right {margin-top: 2px;}
+.siteMapTable th.header {margin-top: 10px;background:url("http://images.dailyradar.com/media/img/user_sidebar_header.png");padding: 2px 5px;border: solid 1px #ccc;vertical-align: middle;font-size: 115%;}
+.siteMapTable td {text-align: center;}
+.siteMapTable td.left {text-align: left;}
+.narrowSummary .balanced, .narrowSummary .wide {display:none;}
+.narrowSummary h4, .narrowSummary div.story-head {margin-top: 0;}
+.narrowSummary .stry {margin-bottom: 0;}
+.stickyNoteComment {background-color: #FEFFC1;border: 1px solid silver;padding: 5px;}
+.sidebarUser .stickyNoteComment {
+margin-right: 12px;margin-bottom: 12px;margin-top: 12px;}
+ul.nested {margin: 0 0 0 20px;}
+ul.normal-height {line-height: normal;}
+ul.normal-height li {margin-bottom: 5px;}
+.remaining {border: 1px solid #ccc;padding: 2px;margin: 5px;}
+ol {list-style-type: decimal;list-style-position: outside;padding-left: 20px;}
+#top_nav {margin-bottom: 15px;}
+.pullQuote {padding: 5px 5px 10px 5px;margin: 8px 50px 25px 50px;border: 1px #ccc dashed;background-color: #eee;}
+.leftQuote {background: url("http://images.dailyradar.com/media/img/icon/left_quote.png") no-repeat;width: 21px;height: 35px;float: left;}
+.rightQuote {background: url("http://images.dailyradar.com/media/img/icon/right_quote.png") no-repeat;width: 22px;height: 15px;float: right;margin-top: -15px;}
+.quoteText {font-style: italic;margin: 0 25px;}
+ul.tracker {list-style-type: none;list-style-position: outside;line-height: 15px;}
+ul.tracker li {margin: 5px; padding-left: 12px;}
+ul.indented {list-style-position: outside;line-height: normal;margin: 0 0 0 20px;}
+.faq-item {margin: 5px;border-bottom: 1px solid #ccc;padding: 5px 0;}
+.faq-question {font-weight: 700;}
+ol.faq-toc {border: 1px solid #ccc;padding: 5px;margin: 15px;list-style-position: inside;}
+ol.faq-toc li {padding: 2px;}
+ol.basic {padding:5px; margin:10px 10px 10px 30px; font-size:90%; font-weight:bold;}
+ol.basic li {padding:2px;}
+ol.basic p {margin:0; padding:0; font-size:110%; font-weight:normal;}
+table.sidebarForm td {font-size: 90%;padding: 2px;}
+table.sidebarForm input {font-size: 90%;}
+.hidden {display:none;}
+div.notificationInfo {border: 1px solid #ccc;background-color: #FEFFC1;margin: 10px 10px 10px 50px;padding: 10px;width: 500px;}
+.notificationInfo ul {list-style-type: none;line-height: normal;padding: 0;margin: 0;}
+.notificationInfo ul li {margin-left: 10px;}
+tr.rankings-self {background-color: #eee;}
+.media-player {padding: 10px;}
+table.grid td, table.grid th {border: 1px solid #ccc;}
+.white {color: #fff;}
+table.upcoming-picks {width: 160px;margin-left: 20px;}
+.sidebar-join {font-size: 110%;margin: 10px;}
+div.sidebar-post-group {background-color: #fff; overflow: hidden;}
+div.sidebar-post-group h3 {font-size: 110%;font-weight: 700;margin: 3px 0 0 0;}
+div.sidebar-post-group h3 .right {margin: -4px 0 -3px 0;}
+div.sidebar-post-group div.stry {clear: none;}
+div.sidebar-post-group div.story-head {font-size: 100%; font-weight: 400;}
+div.sidebar-post-group .post-data {min-height: 36px; position: static;}
+div.ballhype-vote {float: left;}
+div.ballhype-vote a {display: block;margin: 0;padding:0;width:100%;height:100%;overflow:hidden;}
+div.ballhype-vote a:hover {text-decoration: none;}
+div.ballhype-vote span.ballhype-vote-score {display: block;margin: 8px 0 0 14px;}
+div.sidebar-post-group span.ballhype-vote-score {display: block;margin: 8px 0 0 14px;font-size: 8pt;font-weight: 700;text-align: center;}
+div.sidebar-post-group tr.rankings-self {background-color: transparent;}
+div.sidebar-post-group td {padding: 2px;margin: 0;}
+div.limited-width {width: 610px;}
+div.comment-link {font-size: 90%;}
+span.comment-details {font-weight: 500;}
+div.recent-comments {font-size: 90%;margin-left: 20px;}
+div.post-item-link-list { font-size: 90%;}
+a.post-item-link{ margin-left:20px;}
+#secondnav {clear: left;margin: 2px 0 0 0;padding:0;list-style:none;height:31px;text-align:center;float: right;line-height: 22px;letter-spacing:-0.015em;}
+#secondnav li {float:left;display:inline;font-size: 100%;font-weight: 700;letter-spacing: -.015em;}
+#secondnav li.selected {letter-spacing: 0em;}
+#secondnav li h2 {font-size: 110%;margin:0;}
+#secondnav li h3 {font-size: 100%;margin:0;}
+#secondnav li a {color: #666;display: block;padding:0 9px;}
+#secondnav li a:hover {background-color: #fff;color: #339;text-decoration: none;}
+#secondnav li.selected a {background-color: #fff;color: #339;}
+#secondnav li img {padding:6px 0;vertical-align:middle;}
+#secondnav li ul {position: absolute;left: -999em;width:5.5em;z-index:1;}
+#secondnav li ul li {width:5.5em;background-color:#ffc;}
+#secondnav li:hover ul, #secondnav li.snhover ul {left: auto;}
+#firstnav li {float:left;display:inline;font-size:125%;padding:0;width: 130px;height: 27px;}
+#firstnav li a {width: 120px;display:block;padding:7px 0 0 0;height:20px;font-weight:700;line-height:15px;color:#666;text-decoration:none;}
+#firstnav li a:hover {color:#339;}
+#firstnav li.tab a {color:#666;}
+#header-highlight {float: left;text-align: center;margin: 13px 0 0 5px;font-size: 90%;}
+#header-highlight a {color: #fff;}
+.scoreboard-week td {border: 1px solid #ccc;text-align: center;background-color: #eee;font-size: 85%;font-weight: 700;color: #666;padding: 0;}
+.scoreboard-week td a.link {display: block;text-decoration: none;}
+.scoreboard-week td.focus {background-color: #fff;}
+.scoreboard-week div {padding: 3px 5px;}
+.scoreboard-week div.weekday {border: 1px solid #ccc;color: #fff;margin: 3px 3px 0 3px;padding: 0;}
+.scoreboard-week div.arrow {padding: 20px 5px 20px 5px;}
+#cal1Container {
+display:none;position:absolute;left:350px;top:80px;}
+div.poll-result-bar {float: left;height: 12px;border: 1px solid #666;margin: 2px 5px 10px 0;}
+div.poll-results {border: 1px solid #ccc;padding: 5px;margin: 10px 0;}
+.most-widget-link {width: 98px;padding: 2px 0;font-weight: 700;background-color: #fff;border: 1px solid #ccc;font-size: 90%;text-align: center;}
+.most-widget-link a {display: block;}
+.most-widget-link a:hover {text-decoration: none;}
+#mdtrack, #mvtrack, #mhtrack{background-color: #fff;}
+form.join-login{padding: 5px;}
+form.join-login input{width: 150px;font-size: 85%;}
+form.join-login input.submit{width: 75px;}
+p.leader{font-size: 110%;margin-bottom: 0;}
+tr.unread td{background-color: #eee;font-weight: bold;}
+tr.message-list td{border-top: 1px solid #ccc;border-bottom:1px solid #ccc;}
+tr.selected td{background-color: #ccf;}
+table.widget td{padding: 0 0 0 10px;margin: 0;border: 0;text-align: center;font-size: 80%;}
+p.post-link {font-size: 12px;}
+table.calendar th{width: 80px;text-align: center;border: 1px solid #000;}
+table.calendar td{width: 80px;border: 1px solid #000;vertical-align: top;}
+table.calendar td div{min-height: 80px;overflow: hidden;}
+.sidebarUser table.calendar {margin:10px;}
+.sidebarUser table.calendar td{width: 30px;vertical-align: middle;padding:0;text-align:center;}
+.sidebarUser table.calendar td a {width: 30px;display:block;}
+.sidebarUser table.calendar td a:hover {text-decoration:none;}
+#post-content{padding: 7px;margin: 5px 0;}
+#post-content img{margin: 5px;}
+#post-content hr{
+color: #ccc;background-color: #ccc;height: 2px;border: 0;margin: 5px;}
+span#selectedObject{font-weight: 700;border: 2px solid #ccc;padding: 3px;margin: 3px;background-color: #fff;}
+div.profile-box{border: 1px solid #ccc;clear: both;padding: 5px;margin: 5px;}
+div.thumb-grid{float: left;}
+div.thumb-grid a img {border: 1px #ccc solid;margin: 2px;}
+div.sidebarUser div.thumb-grid a img {margin: 1px;}
+span.point-spread {padding: 2px;font-size: 90%;font-weight: 700;}
+.ad-center {margin: 20px 140px;}
+.ad-collapse td, .ad-center td {padding: 0; margin: 0;}
+.ad-text-link-banner {width: 468px; height: 60px; border: 1px solid #333; padding: 10px; text-align: center; margin: auto; background-color: #eee;}
+.ad-notice {color: #666; font-size:80%;text-align: center;}
+.post-list-ad-button {margin: -10px 0 20px 0;text-align: center;}
+.content-callout{margin: 0 20px 20px 20px; background-color: #eee; border: solid 1px #ccc; padding: 5px;}
+.content-callout h6{margin-top: 0; }
+.content-callout ul{ list-style: none;margin:0;list-style-position: outside;}
+.content-callout ul li{padding-left: 15px;}
+
+.play-overlay-50{margin-top:-56px;}
+.play-overlay a, .play-overlay-50 a{-moz-opacity: .65;opacity:.65;filter: alpha(opacity=65);}
+.play-overlay a:hover, .play-overlay-50 a:hover{-moz-opacity: .85;opacity:.85;filter: alpha(opacity=85);}
+.icon-preview {padding: 2px 0 2px 0;}
+.blog-link {margin: 0 0 10px 0;}
+.blog-link-item {margin: 0 0 0 30px;}
+
+#google_map {width: 500px; height: 390px; text-align: left;border: 1px solid #333;}
+#google_map ul {line-height: normal;padding:0;margin:0;}
+
+/* quizzes */
+.quiz_title {margin: 15px 0 0 0;}
+.user-pick {float: left; text-align: center; width: 80px; height: 75px; overflow: hidden; margin: 5px; font-size: 70%;}
+
+#momentum td {padding: 0; margin: 0; border-right: 1px solid #666; border-left: 1px solid #666;}
+#momentum td.entity {text-align: right;padding-right: 5px;width:210px;}
+#momentum td.first-entity {border-top: 1px solid #666;}
+#momentum td.last-entity {border-bottom: 1px solid #666;}
+#momentum .data-bar {float: left; height: 20px;margin: 10px 0 10px 0;cursor:pointer;}
+#momentum .thumb-data-bar {float: left; height:15px;margin: 8px 0 8px 0;cursor:pointer;}
+#momentum .image-sub {width: 32px; height: 32px; float: left; border: 1px solid #ccc;}
+#momentum .thumb-sub, .entity-list .thumb-sub {width: 40px; height: 30px; float: left; border: 1px solid #ccc;}
+#momentum img {float: left; border: 1px solid #ccc; margin: 3px;}
+#momentum .hover {position:absolute; background-color:#eee; border: 2px solid #303; padding:5px;width:300px;}
+
+#approval td {padding: 0; margin: 0; border-right: 1px solid #666; border-left: 1px solid #666;}
+#approval td.entpic {border-right: none;}
+#approval td.entity {padding-right: 5px;border-left: none;}
+#approval td.first-entity {border-top: 1px solid #666;}
+#approval td.last-entity {border-bottom: 1px solid #666;}
+#approval .data-bar {display: block;float: left; height: 20px;margin: 8px 0 8px 0;color: #fff;font-weight: bold;font-size:90%;text-align: right;}
+#approval img {float: left; border: 1px solid #ccc; margin: 3px;}
+#approval td.entbar {width: 300px;background: url("http://images.dailyradar.com/media/img/ballhype/bg/grid.png") repeat-y;}
+
+.featured-text {text-align: center; width: 98%; font-weight: 700; font-size: 110%; margin: 50px 10px 10px 10px;}
+.featured-text a {border: 1px solid #eee;background-color: #ffe; padding: 3px;}
+.featured-text a:hover {background-color: #ffc;}
+.story-photo {margin: 10px; float: left;}
+.edit-tag {font-size: 105%;background-color: #fff;}
+.preview-photo td {padding: 5px 2px 10px 2px; text-align: center;margin:0;vertical-align: top;font-size: 80%;}
+.sidebar-post-group .preview-photo td {padding: 5px 6px 10px 6px;}
+.preview-photo a img {border: 1px solid #ccc;}
+.tag-table {width: 550px; margin-bottom: 10px;}
+.tag-table td, .tag-table img {border: 1px solid #ccc;}
+table.blog-rankings {width:98%;}
+table.blog-rankings td {padding: 3px;height:38px;}
+
+.carousel-component {position:relative;overflow:hidden;display:none;margin:0;padding:0;}
+.carousel-component ul.carousel-list {width:10000000px;position:relative;z-index:1;margin:0px;padding:0px;}
+.carousel-component .carousel-list li {float:left;list-style:none;overflow:hidden;margin:0px;padding:0px;} /* must specify width for each type of carousel */
+.carousel-component .carousel-vertical li {float:none;margin-bottom:0px;overflow:hidden;display:block;} /* must specify height for each type of vertical carousel */
+.carousel-component .carousel-clip-region {overflow:hidden;margin:0px;position:relative;}
+
+#tickercar.carousel-component .carousel-list li {width:500px;}
+#tickercar.carousel-component .carousel-vertical li {float:left;clear:left;}
+#ticker {margin:0 0 18px 0;}
+#ticker td{padding:2px;margin:0;}
+
+table.super-nav {margin:2px;}
+table.super-nav td {padding:2px;margin:0px;border:1px solid #ccc;font-size:100%;background-color: #fff;}
+table.super-nav td span {padding:0 15px 0 0;white-space:nowrap;}
+table.super-nav tr.even td {background-color: #eee;}
+
+#supernav {width: 150px;}
+#supernav:hover {width: 100%;cursor:pointer;}
+#supernav table {display: none;}
+#supernav:hover table {display: block;}
+
+.super {border: 1px solid #FFDB4F; background-color: #ffc;padding:5px;}
+.dashboard-buttons {float: right;}
+.interstitial-header {font-weight: bold;text-align: right;font-size: 20px; width: 1000px; height: 60px;}
+.interstitial-content {background-color: #fff; padding: 50px 0;}
+
+/*
+**   slimnav for blips sites
+*/
+#radar_nav_wrapper {margin:0 auto;width:960px;text-align:left;}
+#radar_nav {font-size: 80%; height: 22px; line-height: 22px; background: #babab9 url("http://images.dailyradar.com/media/img/generic/slimnav/gray_bg.gif") repeat-x top left; width: 100%;}
+#radar_nav ul {padding: 0 10px 0 10px; list-style: none; height: 22px; color:#ffffff;}
+#radar_nav li {float:left; font-size: 110%; line-height:22px; background:url("http://images.dailyradar.com/media/img/generic/slimnav/gray_divider.gif") no-repeat 0 50%;}
+#radar_nav li.small_blips {text-indent:-9000px; width:20px; margin:auto 4px auto 16px; background:url("http://images.dailyradar.com/media/img/generic/small_icons/blips_ltgreyontrans.png") no-repeat 0 50%;}
+#radar_nav li.small_blips a:hover {text-decoration: none; background-color:transparent; }
+#radar_nav li.first, #radar_nav li ul li {background:none; }
+#radar_nav li a {display:block; font-weight:500; padding:0 8px; color:#ffffff;}
+#radar_nav li a:hover {text-decoration:none; color:#000;}
+#radar_nav li.first a {margin:0 auto; }
+#radar_nav li:hover #radar_nav_box, #radar_nav li.rnhover #radar_nav_box {left:-20em;}
+#radar_nav li.rnav {position:relative; z-index:1000;}
+#radar_nav_box {position: absolute; left: -9999em; z-index:1010; padding:0; margin:0; text-align:left; line-height:1.2em; border:3px solid; border-top:6px solid; background:#babab9; border-color:#000000;}
+#radar_nav_box td {vertical-align:top; padding:10px 15px;}
+#radar_nav_box b {font-size:95%; text-transform:uppercase; color:#000000;}
+#radar_nav_box td a {font-size:95%; padding-left:0; color:#ffffff;}
+.post-cluster {margin-left: 47px;font-size:95%;}
+.post-list .post-cluster {margin-left:37px;}
+.post-cluster .tags, .post-cluster .widget-meta {display: none;}
+.post-cluster .weak-child .summary, .post-cluster .weak-child .post-list-thumb, .post-cluster span.wide {display:none;}
+.post-cluster .ellipses {display:inline;}
+.post-cluster .sponsored .ellipses {display:none;}
+.post-cluster div.stry {margin-top:7px; padding-bottom: 0;border:0;}
+.story-page .post-cluster div.stry {margin:0px 0 0 0;}
+
+.radar-logo {border:1px solid #999;margin: 5px 0;}
+
+#top-stories-message {text-align:center;margin:2px auto;width:85%;padding:4px;}
+a#flag {font-size:8pt;color: #999;text-decoration:none;}
+a#flag:hover {text-decoration:underline;}
+
+#chooseRow td, #shortcut_tip {padding-top:20px;}
+#facebookOverlay a:link {color: #000;}
+#bulletin {background:none;background-color:#ffffa6;}
+#activation_prompt {background:none;background-color:#F8F3D2;}
+#activation_prompt h3 {text-align:center;}
+
+.twitter-reactions {background-color:#eef3fb; padding:10px 8px 8px 8px; margin: 12px 0;}
+.twitter-reactions .discussion-title {position:relative; top:-2px; left:3px;}
+.twitter-reactions .post-tweets{margin-bottom:6px ;}
+.post-tweet {margin:2px 0;}
+.post-tweet td {vertical-align:middle;padding:2px 3px;font-size:11px;}
+.post-tweet img {margin-right:2px;}
+.post-tweet .helpText {font-size:80%;}
+
+
+/* --- former core.css --- */
+body {margin: 0; background: #0F0F4F url("http://images.dailyradar.com/media/img/gamerblips/bg/body.jpg");}
+#body_wrapper {width:100%; height:0;}
+#wrapper {padding:0 15px; width:960px; min-height: 400px;}
+#primary {float:left; width:605px; margin:10px 10px 0 15px;}
+#sidebar {float:right; width:300px; margin:10px 15px 0 0; padding-top:0;}
+.wide-video #sidebar {margin-top:900px;}
+* :focus {outline: 0;}
+
+.vert-center {float:left; height:50%; width:1px;}
+.vc-content {clear:both; display:block;}
+
+/*
+**   follow bar
+*/
+#follow-bar {width:100%; background:#DEE1E7; background:#2c2c34 url("http://images.dailyradar.com/media/img/generic/gradv/nearblacks.png"); border-bottom:1px solid #222222; color:#eeeeee;}
+#follow-bar.thin {height:39px;}
+#follow-bar.thick {height:59px;}
+#follow-bar .wrapper {width:100%;}
+.small-logo {float:left; z-index:10; text-indent:-9000px; width:64px; height:22px; background: url("http://images.dailyradar.com/media/img/gamer/button_64x22.png") no-repeat; margin:9px 20px 0px 10px; padding:0;}
+.small-logo a {display: block; text-decoration:none; width:64px; height:22px; background: url("http://images.dailyradar.com/media/img/gamer/button_64x22.png") no-repeat;}
+#follow-bar .shares {float:left; margin-top:15px;}
+#follow-bar .shares span {float:left; font-size:85%;}
+#follow-bar .share-icons {float:left; clear:left; margin-top:2px;}
+#follow-bar .actions {float:right; margin:4px;}
+#follow-bar .actions a img {border: 1px solid #bbbbbb;}
+
+#frame-wrapper {background-color:#fff;margin:2px;padding:2px 4px;}
+#frame-wrapper img {float:left;}
+#frame-post-title {font-size:110%;float:left;padding:2px 0 0 4px;}
+#frame-controls {float:right;font-size:85%;font-weight:bold;padding-top:4px;}
+
+#fb-carousel-wrapper {float:right; min-width:590px; min-height:55px; background:none; padding:0; margin-left:50px; margin:2px 100px 2px 50px; /**margin-right:30px;*/}
+#follow-bar.thin #fb-carousel-wrapper {min-height:35px;}
+#fb-carousel-wrapper .page-link {float:left; height:55px; width:18px; cursor:default;}
+#follow-bar.thin #fb-carousel-wrapper .page-link {height:35px;}
+#fb-carousel-wrapper .page-link.next {float:right;}
+#fb-carousel-wrapper .page-link .vert-center {margin-bottom:-20px;}/* margin-bottom should be negative of half the paging image height, width is for ie */
+#fb-carousel-wrapper .page-link img {clear:both; display:block; margin:0 auto; height:25px; width:14px;}/* clear and display are needed for vert-center*/
+#fb-carousel-wrapper .page-link a {clear:both; display:block; margin:0 auto; text-indent:-9000px; text-decoration:none; width:18px; height:40px; background:url("http://images.dailyradar.com/media/img/generic/small_icons/nav_arrows_greys_on_trans.png") no-repeat; border:0;} /* clear and display are needed for vert-center */
+#fb-carousel-wrapper .page-link a.previous {background-position:0px 0px}
+#fb-carousel-wrapper .page-link a.previous:hover, #fb-carousel-wrapper .page-link a.previous:active {background-position:0px -80px}
+#fb-carousel-wrapper .page-link a.previous.disabled, #fb-carousel-wrapper .page-link a.previous.disabled:hover, #fb-carousel-wrapper .page-link a.previous.disabled:active {background-position:0px -40px; cursor:default;}
+#fb-carousel-wrapper .page-link a.next, #fb-carousel-wrapper .page-link a.next:link, #fb-carousel-wrapper .page-link a.next:visited  {background-position:-20px 0px}
+#fb-carousel-wrapper .page-link a.next:hover, #fb-carousel-wrapper .page-link a.next:active {background-position:-20px -80px;}
+#fb-carousel-wrapper .page-link a.next.disabled, #fb-carousel-wrapper .page-link a.next.disabled:link, #fb-carousel-wrapper .page-link a.next.disabled:hover, #fb-carousel-wrapper .page-link a.next.disabled:active {background-position:-20px -40px; cursor:default;}
+#story-carousel {float:left; margin:1px 2px;}
+#story-carousel.small-image-carousel .carousel-list li {width:200px; margin:0 5px;}
+#story-carousel li a {display:block; border:0; margin:0 5px;}
+#story-carousel a:hover, #story-carousel a:active {cursor:pointer; border-color:#cccccc; text-decoration:none;}
+#story-carousel .thumb {float:left; width:50px; height:50px; border:0; margin:0;}
+#follow-bar #story-carousel .thumb {width:64px; height:48px;}
+#story-carousel li a strong {float:left; font-weight:normal; display:block; width:134px; text-align:left; font-size:95%; line-height:1.2em; margin:4px 0 4px 6px;}
+
+#fb-carousel-wrapper .yui-tt {border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px;}
+#fb-carousel-wrapper .yui-tt .bd {background:#ffffff; font-size:90%; border:1px solid #333333; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; padding:5px 15px;}
+#fb-carousel-wrapper .yui-tt-shadow {background-color:#cccccc; left:2px; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px;}
+
+/*
+**   header
+*/
+#iphone-pagetop {font-size:175%; font-weight:bold; padding:15px 0; background:#efefff; line-height:130%; clear:both;}
+#iphone-pagetop a, #iphone-pagetop a:link, #iphone-pagetop a:visited {text-decoration:underline;}
+#iphone-pagetop a:hover, #iphone-pagetop a:active {color:#000000;}
+
+#radar_nav {padding-right:0px; margin-left:0px;}
+#radar_nav ul {margin:0;}
+#header {position:relative; min-height:0; }
+
+#logo {float:left; z-index:10; text-indent:-9000px; width:237px; height:73px; background: url("http://images.dailyradar.com/media/img/gamerblips/logo.png") no-repeat; margin:0; padding:0;}
+#logo a {display: block; text-decoration:none; height:73px; background: url("http://images.dailyradar.com/media/img/gamerblips/logo.png") no-repeat;}
+
+#tagline {position:absolute; color:#ffffff; font-size:90%; top:48px; left:245px; text-transform: uppercase;}
+#tagline a { text-transform:none; padding:0px 2px;}
+#tagline a:link, #tagline a:visited { color:#ffb000;}
+#tagline a:hover, #tagline a:active {text-decoration:underline; color:#ffb000;}
+
+#nav-user {margin: 0px 2px 10px 0px; float: right; color: #ffffff; font-size:90%; font-weight:normal;}
+#nav-user #username { color:#ffffff;}
+#nav-user #username a {padding-left:0;}
+#nav-user a, #nav-user a:link, #nav-user a:visited {padding:4px 4px;margin:0px; color: #ffffff;}
+#nav-user a.highlight, #nav-user a.highlight:link, #nav-user a.highlight:visited { color:#ffb000; font-weight:bold;}
+#nav-user a:hover, #nav-user a:active { color: #ffb000;}
+#nav-user .FB_login_button {padding:0; margin:0; position:relative; top:7px;}
+
+.headerFind {float:right; clear:right; padding:3px; margin:15px 3px 5px 0px; background-color:#ffffff;}
+.headerFind input.submit { width:52px; height:17px; color: transparent;background:transparent url(http://images.dailyradar.com/media/img/gamerblips/bg/search_button.gif) no-repeat right center;border:none;}
+.headerFind input.submit:hover, input.submit:active { background:transparent url(http://images.dailyradar.com/media/img/gamerblips/bg/search_button_hover.gif) no-repeat right center;}
+
+#nav_bar_wrapper {clear:both; width:100%; height:34px;}
+#nav_bar {background: transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/nav_end_left.png") no-repeat top left; height:28px; text-transform: uppercase;}
+#nav_bar .nav_bar_top {position:relative; min-height:0; background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/nav_end_right.png") no-repeat top right;}
+#nav_bar ul {list-style:none; padding:0; background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/nav_bg.png") repeat-x top left; height:29px; margin:0 18px;}
+#nav_bar li {float:left; background: transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/nav_divider.gif") no-repeat 0 4px; background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/nav_divider.gif") no-repeat 0 50%; line-height:29px; padding-top:0px; font-size: 100%;}
+#nav_bar li h3 { margin:0; font-size:100%; font-weight:normal;}
+#nav_bar li.first, #nav_bar li ul li {background:none;}
+#nav_bar li.first a { margin-left:8px;}
+#nav_bar li.last a { text-transform:none;}
+#nav_bar li a {display: block; color:#ffffff; padding:0 15px; font-weight:500;}
+#nav_bar li a:hover {text-decoration: none; color: #ffb000;}
+#nav_bar li ul {position: absolute; left: -999em; z-index:-5; margin:0; padding:0; margin-top:-1px; text-transform: uppercase;}
+#nav_bar li ul li {float:left; clear:left; margin:0; padding:0; white-space:nowrap; width:125px; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/nav_bg.gif") repeat top left; font-size:90%;}
+#nav_bar li:hover ul, #nav_bar li.snhover ul {left:auto; z-index:1;}
+#nav_bar li.selected a {cursor:default;}
+#nav_bar li.selected a, #nav_bar li.selected a:hover, #nav_bar li.selected a:active {color:#ffb000; background:transparent;}
+#nav_bar li.selected ul li a { color:#ffffff;}
+#nav_bar li.selected ul li.selected a { color:#ffb000;}
+#nav_bar .submit_story {position:absolute; top:0px; right:3px; z-index:5; text-indent:-9000px; margin:0; color:#ffb000; width:145px; height:39px; background: url("http://images.dailyradar.com/media/img/gamerblips/bg/submit_story_button.gif") no-repeat;}
+#nav_bar .submit_story a {display: block; text-decoration:none; height:39px; background: url("http://images.dailyradar.com/media/img/gamerblips/bg/submit_story_button.gif") no-repeat;}
+#nav_bar .submit_story a:hover, #nav_bar .submit_story a:active { background: url("http://images.dailyradar.com/media/img/gamerblips/bg/submit_story_button_hover.gif") no-repeat;}
+
+/*
+** content wrappers
+*/
+#content {clear:both;  min-height:0; margin:0 1px; padding:0 0 20px 0; background:#ffffff;}
+#content-1, #content-2 {margin:0; background:#ffffff;}
+#content-3, #content-4 {margin:0; background:#ffffff; min-height:0;}
+#inner-content {background-color:#ffffff; margin:0; padding:20px 0 10px 0; min-height:0;}
+#inner-content .submit_story {display:none;}
+#wide-content, #lower-content {margin:0 10px; }
+
+/* banner ad */
+.ad-leaderboard {margin:0 105px; text-align:center; background:none; padding:0;}
+.lead-left .ad-leaderboard {margin:0 65px;}
+.ad-leaderboard img {border:none;}
+
+.leaderboard-table td {margin:0; padding:0;}
+.story-page .ad-leaderboard {margin:0 98px; text-align:center; background:#efefef; padding:7px;}
+.lead-left.story-page .ad-leaderboard {margin:0;}
+.lead-left .left-leaderboard {margin-right:8px;}
+.lead-left.home-page .left-leaderboard {display:none}
+.story-page .ad-leaderboard img {border: 1px solid #ccc;}
+.lead-left.story-page .left-leaderboard img {border-color:#efefef;}
+
+#header-leaderboard .ad-leaderboard img {border:none;}
+
+/* page heading and tabs */
+ul.cc-tab {list-style:none; margin:0; padding-bottom:15px; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/tabs_shadow.gif") no-repeat;}
+ul.cc-tab li {float:left;text-align:center;}
+ul.cc-tab li a {display:block;padding:0px; margin-right:2px; width:139px; line-height:24px; height:24px; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/tab_off.gif") no-repeat;color:#333;font-weight:bold;text-transform:uppercase;font-size:85%;}
+ul.cc-tab li.cc-tab-on a { background:url("http://images.dailyradar.com/media/img/gamerblips/bg/tab_on.gif") no-repeat;color:#fff;}
+ul.cc-tab li a:hover {text-decoration:none; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/tab_hover.gif") no-repeat;color:#000;}
+
+.right-nav {text-transform: uppercase; width:100%; text-align:right; padding-bottom:4px 0 5px 0; color:#666666; font-size:85%;}
+.right-nav a {text-decoration:underline;}
+
+/*
+** story/post
+*/
+.content-box, .post-list {padding:0px;}
+.content-box {margin-top:0px;}
+.story-page .content-box {padding-right:10px;}
+.post-list {border-top: 1px solid #cccccc; border-color:#cccccc; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/t_gradient.png") no-repeat;margin-top:-2px;*margin-top:-6px; padding:2px 5px 0;}
+#post-list-top-ad {margin:1px 0 11px 6px;}
+.post-list-thumb {width: 140px; height: 140px; margin-right:0;}
+.story .thumb {width:120px; height:120px; margin-right:0;}
+.post-cluster .post-list-thumb {width: 70px; height: 70px; margin-right:0;}
+
+div.stry {font-size:100%; margin:20px 0 15px 0; padding:0; min-width:0;}
+.stry.sponsored {background:#efefef; padding:5px 7px 5px 5px; margin-right:-7px;}
+.story-page .post-cluster .stry.sponsored {background:#efefef; padding:6px 7px 6px 15px; margin-right:-7px; margin-left:14px;}
+div.related-post-group {margin:10px 0 0 18px;}
+div.sidebar-post-group div.stry, div.related-post-group div.stry {margin:2px 0 8px 0;padding:2px 0 8px 0;}
+div.related-post-group div.stry {width:97%; font-size:95%;}
+div.related-post-group .story-head { font-weight:700; font-size:110%;}
+div.related-post-group div.stry a { text-decoration:underline;}
+div.related-post-group div.stry .server { font-size:90%; color:#666666;}
+.post-data {margin:0 0 0 60px;}
+.post-data.img-offset {margin-right:145px;}
+.sponsored .post-data {margin-top:0; margin-bottom:0; margin-left:30px;}
+.story-page .sponsored .post-data {margin-left:15px;}
+.customColumnNarrow .post-data.img-offset, .customColumnBalanced .post-data.img-offset {margin-right:0px;}
+.post-cluster .post-data {min-height:0;}
+.post-cluster .post-data.img-offset {margin-right:75px;}
+.story-page .post-cluster .post-data {margin-top:12px;}
+.story-page .post-cluster .sponsored .post-data {margin-top:5px;}
+div.sidebar-post-group .post-data, div.related-post-group .post-data {float: none; margin-left: 41px;}
+div.sidebar-post-group .post-data {width:240px;}
+.post-data.story {margin-top:0px; margin-left:60px; padding-left:0;}
+.wide-video .post-data.story {width:873px; padding-left:0px;}
+.wide-video .post-data.story.add-ons {width:533px;}
+div.story-head {text-transform:none; margin:0;}
+.story-page div.story-head {display:inline;}
+div.story-head {color:#333333; font-size:150%; font-weight:700;}
+.post-list .story-head { font-size:135%;}
+.post-cluster .story-head, .story-page .sponsored .story-head  { font-size:115%;}
+.post-cluster .weak-child .story-head{ font-size:105%;}
+div.story-head a:link, div.story-head a.external:link, div.story-head a:visited, div.story-head a.external:visited {text-decoration:underline; border:0; color:#006633;}
+div.story-head a:hover, div.story-head a.external:hover, div.story-head a:active, div.story-head a.external:active {text-decoration:underline; border:0; color:#000000;}
+div.story-head a.external-icon { display:inline-block; text-indent:-9000px; border:none; text-decoration:none; border:none; height:12px; width:12px; margin:0 0 1px 0;}
+div.story-head a.external-icon, div.story-head a.external-icon:link, div.story-head a.external-icon:visited { background:url("http://images.dailyradar.com/media/img/generic/small_icons/external_link_ltgrey.png") no-repeat; border:none; text-decoration:none;}
+div.story-head a.external-icon:hover, div.story-head a.external-icon:active {background:url("http://images.dailyradar.com/media/img/generic/small_icons/external_link_dkgrey.png") no-repeat; border:none; text-decoration:none;}
+
+.play-overlay {margin-top:-146px;}
+.post-cluster .play-overlay {margin-top:-76px;}
+.related-video .play-overlay {margin-top:-106px;}
+
+p.summary, div.summary, td.summary {line-height: 15px; font-size:100%; margin:3px 0 5px 0; color:#333333;}
+.story-page div.super.summary {display:block;}
+.story-page div.summary {display:inline;}
+.story .summary {line-height:normal; margin:5px 0 10px 0;}
+.story-page .story .summary {margin-bottom:0;}
+.story-page #description, .story-page #post-content {display:inline;}
+.sum-dash {display:none;}
+.story-page .sum-dash {display:inline;}
+.post-data .server {font-size:85%; color:#777777;}
+.story-page .summary .server, .post-info, .sponsored .post-info .server {display:none;}
+.story-page .sponsored .post-info .server {display:inline; font-style:normal;}
+.story-page .story .post-info, .story-page .stry .post-info {display:block; font-size:11px; color:#aaaaaa;}
+.story-page .story .post-info .server, .story-page .stry .post-info .server {font-size:11px; color:#555555;}
+.sponsored .post-info {display:block; margin:2px 0 5px -20px; font-size:11px; font-style: italic; color:#aaaaaa;}
+.story-page .sponsored .post-info {margin:0px;}
+div.summary a, div.summary a:link, div.summary a:visited {font-size:95%;}
+div.summary a.internal, div.summary a.internal:link, div.summary a.internal:visited {color:#999999; font-style:italic; text-decoration:underline;}
+div.summary a:hover, div.summary a:active { color:#000000;}
+.title-story-page-link {margin-top:2px; display:block;}
+.story-page .title-story-page-link {margin-top:0; display:none;}
+.more-story-page-link {display:none;}
+.story-page .more-story-page-link, .sponsored .more-story-page-link {display:inline;}
+.sponsored .more-story-page-link { font-style:italic; }
+
+.story-page .tags {margin-top:2px;}
+h3.tag {display:inline; margin:0 5px 0 0; padding:0; font-size:80%; font-weight:normal; color:#666666;}
+h3.tag a, h3.tag a:link, h3.tag a:visited { color:#777777;}
+h3.tag a:hover, h3.tag a:active { color:#000000;}
+
+.comment-link {font-size:85%; color:#777777;}
+.story .comment-link {margin-top:0px; float:right; line-height:15px; font-size:70%; color:#aaaaaa;}
+.story-page .post-cluster .comment-link {display:none;}
+.comment-link a, .comment-link a:link, .comment-link a:visited {whitespace:nowrap; margin-left:7px; text-decoration:underline;}
+.comment-link a.post-comment {font-weight:bold;}
+.comment-link a, .comment-link a:link, .comment-link a:visited {color:#777777;}
+.comment-link a.post-comment, .story .comment-link a.voting_down {margin-left:0px;}
+.story .comment-link a, .story .comment-link a:link, .story .comment-link a:visited {color:#aaaaaa; margin-right:4px; margin-left:0;}
+.story-page .comment-link a.post-comment {margin-left:0px;}
+.comment-link a:hover, .comment-link a:active {whitespace:nowrap;}
+.comment-link a:hover, .comment-link a:active, .comment-link a.external:hover, .comment-link a.external:active {color:#000000;}
+.story .comment-link a:hover, .story .comment-link a:active, .story .comment-link a.external:hover, .story .comment-link a.external:active {color:#666666;}
+span.new-comment-flag {font-weight: 700; color: #ffb000;}
+.post-info-short {display:none;}
+.story-page .post-info-short, .post-info-long {display:inline;}
+.story-page .post-info-long {display:none;}
+
+.story-page .post-actions {float:right; margin:0 0 4px 0;}
+.story-page div.top-buttons {margin:0 4px 2px 0;}
+
+.share-icon {float:left; text-indent:-9000px; border:none; height:16px; width:16px; margin:3px 0px 3px 4px;}
+.share-icon a {display:block; text-decoration:none; height:16px; width:17px;}
+.share-icon a.facebook {background:url("http://images.dailyradar.com/media/img/generic/share_icons/facebook_16x16_lite.gif") no-repeat;}
+.share-icon a.twitter {background:url("http://images.dailyradar.com/media/img/generic/share_icons/twitter_16x16_lite.gif") no-repeat;}
+.share-icon a.stumble {background:url("http://images.dailyradar.com/media/img/generic/share_icons/stumble_16x16_lite.png") no-repeat;}
+.share-icon a.email {background:url("http://images.dailyradar.com/media/img/generic/share_icons/email_16x11_lite.png") no-repeat; margin-top:2px;}
+.share-icon.bright a.facebook {background:url("http://images.dailyradar.com/media/img/generic/share_icons/facebook_16x16.gif") no-repeat;}
+.share-icon.bright a.twitter {background:url("http://images.dailyradar.com/media/img/generic/share_icons/twitter_16x16.png") no-repeat;}
+.share-icon.bright a.stumble {background:url("http://images.dailyradar.com/media/img/generic/share_icons/stumble_16x16.png") no-repeat;}
+.share-icon.bright a.email {background:url("http://images.dailyradar.com/media/img/generic/share_icons/email_16x11.png") no-repeat;}
+div.share-links {width:42px; text-align:center; position:relative; top:50px; left:4px;}
+.share-link {font-size:75%; margin:5px 0; border:1px solid #bbbbbb; padding: 1px 3px 0px 3px; line-height:11px;}
+.share-link a:hover {text-decoration:none;}
+
+ul.share-icons {list-style:none;}
+ul.share-icons li {float:left; text-indent:-9000px; border:none; width:16px; height:16px; margin:0px 0px 0px 4px;}
+ul.share-icons.big li {width:48px; height:48px; margin:0px 0px 0px 15px;}
+ul.share-icons li.first {margin-left:0;}
+ul.share-icons li a {background:url("http://images.dailyradar.com/media/img/generic/share_icons/share_icons_16.png") no-repeat; display:block; text-decoration:none; width:17px; height:16px;}
+ul.share-icons li a {background:url("http://images.dailyradar.com/media/img/generic/share_icons/share_icons_16_all.png") no-repeat;}
+ul.share-icons.big li a {background:url("http://images.dailyradar.com/media/img/generic/share_icons/share_icons_48.png") no-repeat; width:48px; height:48px;}
+ul.share-icons.small.light li a.facebook {background-position:-16px 0px}
+ul.share-icons.small.light li a.twitter {background-position:-16px -16px}
+ul.share-icons.small.light li a.stumble {background-position:-16px -32px}
+ul.share-icons.small.light li a.email {background-position:-16px -48px}
+ul.share-icons.small.dark li a.facebook {background-position:-32px 0px}
+ul.share-icons.small.dark li a.twitter {background-position:-32px -16px}
+ul.share-icons.small.dark li a.stumble {background-position:-32px -32px}
+ul.share-icons.small.dark li a.email {background-position:-32px -48px}
+ul.share-icons.small li a.facebook, ul.share-icons.small.bright li a.facebook, ul.share-icons.small li a.facebook:hover {background-position:0px 0px}
+ul.share-icons.small li a.twitter, ul.share-icons.small.bright li a.twitter, ul.share-icons.small li a.twitter:hover {background-position:0px -16px}
+ul.share-icons.small li a.stumble, ul.share-icons.small.bright li a.stumble, ul.share-icons.small li a.stumble:hover {background-position:0px -32px}
+ul.share-icons.small li a.email, ul.share-icons.small.bright li a.email, ul.share-icons.small li a.email:hover {background-position:0px -48px}
+ul.share-icons.big li a.facebook {background-position:0px 0px}
+ul.share-icons.big li a.twitter {background-position:0px -48px}
+ul.share-icons.big li a.stumble {background-position:0px -96px}
+
+.post-data .fb-like {margin-top:5px; margin-bottom:5px;}
+.story-page .post-data .fb-like {margin-top:10px; margin-bottom:0px;}
+
+.media-wrapper {margin:20px 0px 0px 0px; position:relative;}
+#media-wrapper-end {min-height:1px; margin:0; padding:0; background:none;}
+.media-player {padding: 10px;}
+
+.wide-video-player {position:relative; width:853px; height:505px; background:#ffffff; padding:0; text-align:center; border:10px solid #EEEEEE; border-bottom:0px; border-top-left-radius:8px; -moz-border-radius-topleft:8px; -webkit-border-top-left-radius:8px; border-top-right-radius:8px; -moz-border-radius-topright:8px; -webkit-border-top-right-radius:8px; z-index:20;}
+#yt-player {position:relative}
+
+.video-overlay {display:none; z-index:25; position:absolute; top:0; left:0; background:#000000; height:480px; border-bottom:25px solid #eeeeee;}
+.video-overlay .notice {color:#cccccc; margin-top:10px;}
+#flvPlayerDiv {width:425px; height:350px; margin:40px auto 0; background-color:#000000;}
+
+.media-wrapper .actions {background:#eeeeee; padding:0 10px 10px 10px; border-bottom-left-radius:8px; -moz-border-radius-bottomleft:8px; -webkit-border-bottom-left-radius:8px; border-bottom-right-radius:8px; -moz-border-radius-bottomright:8px; -webkit-border-bottom-right-radius:8px;}
+.np-info {float:right; width:205px; background:#ffffff; padding:15px 10px 20px 10px; color:#333333; font-size:95%; font-weight:700; border-bottom-left-radius:8px; -moz-border-radius-bottomleft:8px; -webkit-border-bottom-left-radius:8px; border-bottom-right-radius:8px; -moz-border-radius-bottomright:8px; -webkit-border-bottom-right-radius:8px;}
+.np-info div.top-buttons {margin:0}
+.np-info .share-icon {margin:0 4px 0 0;}
+.np-info .heading {color:#555555; font-size:85%; font-weight:700; text-transform:uppercase;}
+.np-info .description {padding:8px 0 2px 0; font-size:95%;}
+.np-info .post-comment {float:right; font-size:85%; margin-right:5px;}
+.np-info a.post-comment, .np-info a.post-comment:link, .np-info a.post-comment:visited {color:#555555; font-weight:700; text-decoration:underline;}
+.np-info a.post-comment:hover, .np-info a.post-comment:active {color:#333333;}
+.np-info .share-icons {margin:12px auto 0 auto; width:174px; display:block;}
+
+#vp-carousel-wrapper {float:left; min-width:590px; min-height:90px; background:#ffffff; padding:8px; border-bottom-left-radius:8px; -moz-border-radius-bottomleft:8px; -webkit-border-bottom-left-radius:8px; border-bottom-right-radius:8px; -moz-border-radius-bottomright:8px; -webkit-border-bottom-right-radius:8px; *margin-right:30px;}
+#vp-carousel-wrapper .page-link {float:left; height:90px; width:18px; cursor:default;}
+#vp-carousel-wrapper .page-link.next {float:right;}
+#vp-carousel-wrapper .page-link .vert-center {margin-bottom:-20px;}/* margin-bottom should be negative of half the paging image height, width is for ie */
+#vp-carousel-wrapper .page-link img {clear:both; display:block; margin:0 auto; height:25px; width:14px;}/* clear and display are needed for vert-center*/
+#vp-carousel-wrapper .page-link a {clear:both; display:block; margin:0 auto; text-indent:-9000px; text-decoration:none; width:18px; height:40px; background:url("http://images.dailyradar.com/media/img/generic/small_icons/nav_arrows_greys.png") no-repeat; border:0;} /* clear and display are needed for vert-center */
+#vp-carousel-wrapper .page-link a.previous {background-position:0px 0px}
+#vp-carousel-wrapper .page-link a.previous:hover, #vp-carousel-wrapper .page-link a.previous:active {background-position:0px -80px}
+#vp-carousel-wrapper .page-link a.previous.disabled, #vp-carousel-wrapper .page-link a.previous.disabled:hover, #vp-carousel-wrapper .page-link a.previous.disabled:active {background-position:0px -40px; cursor:default;}
+#vp-carousel-wrapper .page-link a.next, #vp-carousel-wrapper .page-link a.next:link, #vp-carousel-wrapper .page-link a.next:visited  {background-position:-20px 0px}
+#vp-carousel-wrapper .page-link a.next:hover, #vp-carousel-wrapper .page-link a.next:active {background-position:-20px -80px;}
+#vp-carousel-wrapper .page-link a.next.disabled, #vp-carousel-wrapper .page-link a.next.disabled:link, #vp-carousel-wrapper .page-link a.next.disabled:hover, #vp-carousel-wrapper .page-link a.next.disabled:active {background-position:-20px -40px; cursor:default;}
+#video-player-carousel {float:left; margin:0 2px;}
+.small-image-carousel .carousel-list li {width:100px; margin:0 5px;}
+#video-player-carousel li a {display:block; border:0; margin:0;}
+#video-player-carousel a:hover, #video-player-carousel a:active {cursor:pointer; border-color:#cccccc; text-decoration:none;}
+#video-player-carousel .thumb {height:90px; width:90px; border:0; margin:0 5px;}
+#video-player-carousel li a strong {display:block; font-size:80%; line-height:normal; margin:2px 6px 0 6px; text-align:center;}
+
+#vp-carousel-wrapper .yui-tt {border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px;}
+#vp-carousel-wrapper .yui-tt .bd {background:#ffffff; font-size:90%; border:1px solid #333333; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; padding:5px 15px;}
+#vp-carousel-wrapper .yui-tt-shadow {background-color:#cccccc; left:2px; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px;}
+
+.post-data-ad {margin-top:15px; margin-bottom:15px;}
+
+.top-tags {float:right; clear:right; margin:0px 0px 0px 5px; font-size:70%; font-weight:normal; color:#aaaaaa;}
+h3.top-tag {display:inline; margin:0 4px 0 0; padding:0; font-size:100%; font-weight:normal; line-height:15px; color:#aaaaaa;}
+h3.top-tag a, h3.top-tag a:link, h3.top-tag a:visited {text-decoration:underline; color:#aaaaaa;}
+h3.top-tag a:hover, h3.top-tag a:active { color:#666666;}
+
+/* voting widget */
+div.stry .widget {float:left; width:60px; height:60px; margin:0; border:none; position:relative; background:#ffffff;}
+.post-list div.stry .widget {left:0; top:-10px;}
+.post-cluster div.stry .widget {left:0; top:-5px;}
+.story.widget {float:left; width:60px; height:60px; margin:0; top:55px;}
+.voting_up {position:absolute; top:4px; left:0px; border:none; margin:0; padding:0; width:60px; height:60px; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/voting/large_vote_sprite.gif") no-repeat 0 -60px;}
+.story .voting_up {left:7px;}
+.voting_up.selected { width:60px; height:60px; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/voting/large_vote_sprite.gif") no-repeat 0 -60px;}
+.voting_up a, .voting_up a:link, .voting_up a:visited {display: block; text-decoration:none; height:60px; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/voting/large_vote_sprite.gif") no-repeat 0 0;}
+.voting_up a:hover, .voting_up a:active {text-decoration:none; cursor:pointer; cursor:hand; height:60px; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/voting/large_vote_sprite.gif") no-repeat 0 -60px;}
+.voting_up.selected a, .voting_up.selected a:link, .voting_up.selected a:visited, .voting_up.selected a:hover, .voting_up.selected a:active {text-decoration:none; height:60px; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/voting/large_vote_sprite.gif") no-repeat 0 -60px;}
+.voting_up .points_count {position:absolute; text-align:center; width:60px; color:#ffffff; bottom:23px; font-size:85%; font-weight:700;}
+div.stry .widget .center {position:absolute; top:50px; left:0px; text-align:center; width:60px; font-size:85%;}
+div.stry .widget .center a, div.stry .widget .center a:link, div.stry .widget .center a:visited {position:relative; color:#006633; left:0px; top:0px;}
+div.stry .widget .center a:hover, div.stry .widget .center a:active, div.stry .widget .center a.visited:hover, div.stry .widget .center a.visited:active {text-decoration:underline; color:#000000;}
+.post-cluster  div.stry .widget .center a {display:none;}
+.widget-meta .meta-link {width:42px; position:absolute; text-align:center; top:45px; left:0px; font-size:85%;}
+.voting_down {text-transform:capitalize}
+.story .voting_down {text-transform:lowercase;}
+
+.post-cluster div.stry .widget {width:50px; height:50px;}
+.post-cluster .voting_up {position:absolute; top:5px; left:8px; border:none; margin:0; padding:0; background: none;}
+.post-cluster .voting_up a {margin: 0px 0 0 4px;}
+.post-cluster .voting_up.selected a {margin: 0px 0 0 4px;}
+.post-cluster .voting_up .points_count { width:50px; bottom:29px; font-size:75%;}
+
+/* 
+** comments and links
+*/
+.reaction_title {margin:10px 0 5px 17px; padding:10px 0 0 5px; text-transform:uppercase; border-bottom:1px solid #aaaaaa; color:#666666; border-color:#aaaaaa; font-size: 80%;}
+
+.comment.featured-comment {border:none;}
+.post-list .featured-comment {margin-left:65px;}
+.comment_list .featured-comment .comment-header {border:none; margin-bottom:5px; background-color:#D1E0EF;}
+.featured-comment .comment-body {position:relative; padding-left:35px; width:93%; line-height:normal; color:#666666; background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/featured_quotes.gif") no-repeat 3px 3px; font-family:Georgia "Times New Roman",Garamond, serif; font-size:110%;}
+.featured-comment a.featured-commenter {margin-top:15px; whitespace:nowrap; font-family:Arial,Verdana,Helvetica,sans-serif;}
+.featured-comment a.featured-commenter, .featured-comment a.featured-commenter:link, .featured-comment a.featured-commenter:visited {float:left; clear:both; text-decoration:underline; color:#666666; font-size:90%;}
+featured a.featured-commenter:hover, .featured-comment a.featured-commenter:active {color:#000000;}
+.featured-comment .box_top_left {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/featured_top_left.gif") no-repeat 0% 0%;}
+.featured-comment .box_top {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/featured_top.gif") repeat-x 0% 0%;}
+.featured-comment .box_top_right {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/featured_top_right.gif") no-repeat 100% 0%;}
+.featured-comment .box_bottom_left {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/featured_bottom_left.gif") no-repeat 0% 100%;}
+.featured-comment .box_bottom {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/featured_bottom.gif") repeat-x 50% 100%;}
+.featured-comment .box_bottom_right {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/featured_bottom_right.gif") no-repeat 100% 100%;}
+.featured-comment .box_right {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/featured_right.gif") repeat-y 100% 0%;}
+.featured-comment .box_left {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/featured_left.gif") repeat-y 0% 100%;}
+.featured-comment .box_content {padding:10px;}
+.featured-comment {clear:both; padding:0 5px 0 0; margin:10px 0;}
+.comment-respond {float:right; bottom:0; right:0; text-indent:-9000px; margin:15px 0 0 0; padding:0; width:107px; height:31px;}
+.comment-respond a {display: block; text-decoration:none;}
+.comment-respond a, .comment-respond a:link, .comment-respond a:visited { width:107px; height:31px; background: url("http://images.dailyradar.com/media/img/gamerblips//bg/featured_respond.gif") no-repeat;}
+.comment-respond a:hover, .comment-respond a:active { width:107px; height:31px; background: url("http://images.dailyradar.com/media/img/gamerblips//bg/featured_respond_hover.gif") no-repeat;}
+div.comment-meta { color:#666666;}
+div.comment-meta a {text-decoration:underline;}
+
+p.post-link {margin:0 0 0 18px; padding:10px 0; overflow:hidden; border-bottom:1px dotted #cccccc; border-color:#cccccc;}
+.post-link .post_url { font-size:110%; font-weight:700;}
+.post-link a.post_url, .post-link a.post_url:link {text-decoration:underline;}
+.post-link .blog_url { color:#666666; font-size:90%;}
+.post-link a.blog_url, .post-link a.blog_url:link, .post-link a.blog_url:visited { color:#666666;}
+.post-link a.blog_url:hover, .post-link a.blog_url:active {text-decoration:underline; color:#000000;}
+
+.discussion {margin:20px 0 20px 0; font-size:105%;}
+#hidden_blog_disc {display:none;}
+.discussion-title {margin:0; border:none; text-transform:uppercase; color:#999999; font-size:85%; font-weight:normal;}
+.discussion-title a, .discussion-title a:link, .discussion-title a:visited {color:#999999; text-decoration:underline;}
+.discussion-title a:hover, .discussion-title a:active {color:#222222; text-decoration:underline;}
+p.blog-disc {margin:4px 0 0 0; border:none; font-size:85%; color:#555555;}
+.blog-disc a.blog_url, .blog-disc a.blog_url:link, .blog-disc a.blog_url:visited {text-decoration:none; color:#555555;}
+.blog-disc a.blog_url:hover, .blog-disc a.blog_url:active {text-decoration:underline; color:#222222}
+.blog-disc a.post_url, .blog-disc a.post_url:link, .blog-disc a.post_url:visited {text-decoration:underline;}
+.blog-disc a.post_url:hover, .blog-disc a.post_url:active {text-decoration:underline; color:#222222;}
+
+.discussion .display-toggler {margin-top:5px;}
+a.more-button {background:#aaaaaa; color:#ffffff; font-size:80%; font-weight:700; padding:0px 6px; text-transform:lowercase;}
+a.more-button:link, a.more-button:visited {color:#ffffff; text-decoration:none;}
+a.more-button:hover, a.more-button:active {background:#999999; color:#ffffff; text-decoration:none;}
+
+/*
+** sidebar
+*/
+.sidebar-gradient {width:100%; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/r_gradient.gif") no-repeat bottom;}
+.sidebar-gradient .profile_pic_midsize {width:80px;}
+
+.ad-button {min-height:0; margin:10px 0px 20px 0px; text-align: center; background:none; padding:0px;}
+.ad-button img {border:none;}
+
+.story-page .ad-button {margin:0px -7px 20px -7px; text-align: center; background:#efefef; padding:7px;}
+.story-page .ad-button img {border: 1px solid #ccc;}
+
+.sidebar-item {margin:0 5px 20px 5px; text-align:center;}
+
+.sidebarRelated {margin-top:0; margin-bottom:20px;}
+
+.sidebarUser {padding:0; margin-top:0; margin-bottom:20px; background-color:#fff;background:url("http://images.dailyradar.com/media/img/gamerblips/bg/r_gradient.gif") no-repeat bottom;}
+.sidebarUser a {text-decoration: underline;}
+.sidebarUser p {margin:10px;}
+.headerbar { background:url("http://images.dailyradar.com/media/img/gamerblips/bg/headerbar.gif") no-repeat;width:300px;height:25px;color:#fff;}
+.self-headerbar { background:url("http://images.dailyradar.com/media/img/gamerblips/bg/headerbar_self.gif") no-repeat;width:300px;height:25px;color:#fff;}
+.self-headerbar td, .headerbar td {padding:0px 10px; font-size:85%; font-weight:700; text-transform:uppercase;}
+.self-headerbar td a {text-decoration: none; text-transform:uppercase; color:#dddddd; font-size:90%;}
+.self-headerbar td a:hover, .self-headerbar td a:active {color:#ffffff; text-decoration:underline;}
+.headerbar td a {text-decoration: none;  text-transform:uppercase; color:#dddddd; font-size:90%;}
+.headerbar td a:hover, .headerbar td a:active {color:#ffffff; text-decoration:underline;}
+
+.sidebarUsername {margin-bottom: 15px;}
+.sidebarUserLinks { font-size: 90%;line-height:18px;}
+.sidebarUserLinks a { font-weight: bold;}
+
+div.sidebar-group-header {margin:10px; font-size:115%; font-weight:bold;}
+div.sidebar-group-header a {text-decoration:none;}
+div.sidebar-post-group {margin:5px; padding:0; border:0;background:transparent; overflow-y:auto;}
+div.sidebar-post-group #mdtrack, div.sidebar-post-group #mvtrack, div.sidebar-post-group #mhtrack {background:transparent;}
+div.ballhype-vote {position:relative; top:0px; left:8px; background: url("http://images.dailyradar.com/media/img/gamerblips/voting/small_vote_sprite.gif") no-repeat 0 -50px; width:50px; height:50px;}
+div.ballhype-vote a {background: url("http://images.dailyradar.com/media/img/gamerblips/voting/small_vote_sprite.gif") no-repeat;color: #333;text-decoration:none;}
+div.sidebar-post-group span.ballhype-vote-score {margin-left:-2px;margin-top:15px;}
+div.sidebar-post-group h4 { font-size:105%; font-weight: bold;}
+div.sidebar-post-group h3 a {text-decoration:none;}
+
+.sidebarUser .header {margin:0;padding:5px 5px 5px 10px;border:0; font-size:85%; font-weight:700; text-transform:uppercase; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/headerbar.gif") no-repeat;width:300px;max-height:25px;color:#fff;margin-top:-1px; margin-left:-1px;}
+.sidebarUser .header b, .sidebarUser .header h3 { color:#fff; font-size: 100%;}
+.sidebarUser .header a { font-size:90%;text-decoration: none; text-transform:uppercase;}
+.sidebarUser .header .right {margin-right:15px;}
+.sidebarUser .insideSidebarUser {margin:10px;}
+
+.small-thumb {height:70px; width:70px}
+#bulletin .small-thumb {float:left; margin-right:10px; border:1px solid #FFFF7B}
+#bulletin .sidebar-content {padding:15px 10px;}
+#bulletin .bulletin-post {margin-top:20px;}
+#bulletin .bulletin-post.first {margin-top:0px;}
+#bulletin .sidebar-content p {margin:7px 0 0 0; font-size:90%; color:#555555;}
+#bulletin .sidebar-content b {font-size:110%;}
+
+/* see related_videos.py before changing height or top/bottom margins */
+.related-video {float: left; text-align: center; width: 138px; height: 150px; margin: 5px 3px; font-size: 90%;}
+
+/*
+** image cloud
+*/
+.image-cloud {margin:5px;}
+.image-cloud img {padding:0;border:0;margin:0;float:left; border-bottom:1px solid #ffffff;}
+.image-cloud img#large-thumb {margin-right: 2px; border:0;}
+
+/*
+** enclosures
+*/
+.action-box {background:#EEF3FB; color:#444444; padding:10px; border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;}
+.action-box.smaller-text {font-size:95%;}
+.action-box.bordered {background:none; border:5px solid #eef3fb;}
+.action-box.indented {margin-left:20px;}
+#sidebar .action-box {margin:0 5px 20px 5px;}
+.action-box .action-block, .action-box .text-block {float:left;}
+.action-box .heading {font-size:110%; font-weight:700; margin-top:5px; margin-bottom:5px;}
+
+.action-box.follows {height:32px;}
+.action-box.follows .text-block, .action-box.follows .action-block {height:32px;}
+.action-box.follows .text-block {margin-left:20px;}
+.action-box.follows .action-block {margin-left:5px;}
+.action-box.follows .heading {clear:both; line-height:18px;}
+.action-box.follows .text-block .vert-center {margin-bottom:-9px;}
+.action-box.follows .actions {clear:both;}
+.action-box.follows .medium .actions {height:28px;}
+.action-box.follows .medium .vert-center {margin-bottom:-14px;}
+.action-box.follows a {display:block; float:left; margin:0 8px;}
+.action-box.follows .medium a {height:38px; width:28px; margin:0; padding:0 6px}
+.action-box.follows .medium img {height:28px; width:28px;}
+.action-box.follows .medium a, .action-box.follows .medium a:link, .action-box.follows .medium a:visited {background:none;}
+.action-box.follows .medium a:hover, action-box.follows .medium a:active {background:url("http://images.dailyradar.com/media/img/generic/small_icons/fuzzy_underline_ltgrey_38.png") no-repeat center bottom;}
+
+.highlight-box {display:inline-block;}
+#sidebar .highlight-box {border:8px solid #efefef; border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;}
+
+/*
+** headings
+*/
+h1.action, h2.action, h3.action, h4.action, h5.action, h6.action {font-weight:700;}
+h1.action, h2.action {font-size:130%;}
+h3.action, h4.action {font-size:120%;}
+h5.action, h6.action {font-size:110%;}
+h1.action, h3.action, h5.action {border-bottom:2px solid #eef3fb; margin-top:20px; margin-bottom:5px; margin-right:15%;}
+h2.action, h4.action, h6.action {margin-top:5px; margin-bottom:5px;}
+
+/*
+** pagination
+*/
+.pagination_wrapper {clear:both; margin:30px 0 0 0; padding:0; border-top:2px solid #333333;}
+.page_numbering {clear:none; float:left; margin:10px 0; padding:0; color:#666666; text-transform:uppercase; font-size:85%;}
+.pagination {clear:none; float:right; margin:10px 0; padding:0; color:#333333;}
+.pageLink {padding:0 5px; color:#666666; font-weight:700; font-size:95%;}
+a.pageLink {border:none; padding:0 5px; background-color:#ffffff; font-weight: 700; text-decoration:underline; text-transform:uppercase;}
+.pagination_load_more {border-top:0;}
+
+/*
+** facebook
+*/
+#facebookOverlay {display:none;}
+#facebookOverlay.yui-panel {display:block; background:url("http://images.dailyradar.com/media/img/generic/1x1/1x1_trans_grey.png"); background:rgba(0, 0, 0, 0.5); border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px; padding:10px;}
+#facebookOverlay.yui-panel .container-close {margin-left:10px;right:11px; top:11px; height:12px; width:12px; background:url("http://images.dailyradar.com/media/img/generic/small_icons/window_close.png") no-repeat;}
+#facebookOverlay.yui-panel .container-close:hover {background:url("http://images.dailyradar.com/media/img/generic/small_icons/window_close_hover.png") no-repeat;}
+#facebookOverlay .hd {display:block; border:#3B5998 1px solid; background:#6D84B4; color:#fff; padding:7px 10px; font-size:125%; font-weight:bold;}
+#facebookOverlay .bd {background:#fff; border:#555 1px solid; border-top:none; border-bottom :none; padding:15px;}
+#facebookOverlay .ft {border:#555 1px solid; border-top:none; background:#f2f2f2;}
+#facebookOverlay .ft > div {border-top:#ccc 1px solid; padding:5px 10px; text-align:right;}
+
+#facebookOverlay {font-family:Helvetica,Arial,Verdana,sans-serif; color:#333333; font-size:90%; text-align:left;}
+#facebookOverlay p a, #facebookOverlay p a:link, #facebookOverlay p a:visited {font-size:95%; color:#888888; text-decoration:underline;}
+#facebookOverlay p a:hover, #facebookOverlay p a:active {color:#3B5998;}
+
+#facebookOverlay .hd .header {margin-right:10px;}
+#facebookOverlay .fbc-title-wrapper {float:left; clear:both; margin:0;}
+#facebookOverlay #fbc-join .fbc-title-wrapper {width:410px;}
+#facebookOverlay .fbc-title {float:left; margin:25px 0 0 12px; padding:0 100px 2px 0; border-bottom:1px solid #333333; font-size:100%; font-weight:bold;}
+#facebookOverlay .fbc-title b {font-size:170%; font-weight:bold;}
+
+#facebookOverlay .fbc-body-wrapper {margin:20px 0 0 0;}
+#facebookOverlay .fbc-form {margin:5px 25px;}
+#facebookOverlay #fbc-old-mem {display:none;}
+#facebookOverlay .fbc-input-title {margin:0; font-weight:bold; font-size:95%;}
+#facebookOverlay input {padding:2px 1px 1px 1px; font-family:Helvetica,Arial,Verdana,sans-serif; font-size:110%;}
+#facebookOverlay input.checkbox {position:relative; top:3px;}
+#facebookOverlay .fbc-submit {margin-top:15px; margin-right:30px;}
+#facebookOverlay .yui-button {margin-left:0;}
+#facebookOverlay #fbc-new-mem .fbc-submit {margin-top:20px; margin-right:75px;}
+#facebookOverlay #fbc-new-mem .yui-button {background:#3B5998; border:1px solid #cdcdcd;}
+#facebookOverlay #fbc-new-mem button {height:3em; width:14em; font-size:140%; font-weight:bold; color:#ffffff;}
+#facebookOverlay #fbc-new-mem .yui-button-hover  {background:#4266AB; border-color:#bcbcbc;}
+#facebookOverlay #fbc-new-mem .yui-button-hover .first-child, #facebookOverlay #fbc-new-mem .yui-button-hover button {border-color:#bcbcbc;}
+#facebookOverlay .right-link {text-align:right; margin:20px 0 0 0;}
+
+.facebook-box {background:#D9DEEF; border:2px solid #93A5EB;}
+.page-head .facebook-box {float:left; margin-left:35px; margin-bottom:0px;}
+.facebook-box p {margin-bottom:0px; color:#777777; font-size:85%; font-weight:bold;}
+.facebook-box p.fbc-button {text-align:center; margin:10px auto;}
+.facebook-box p.label {margin:10px 0; color:#333333; font-size:90%; font-weight:bold;;}
+.facebook-box input {position:relative; top:3px; margin-left:10px;}
+.facebook-box .formerror {float:none; margin:10px auto;}
+.facebook-box .right-link {text-align:right; margin-top:10px;}
+
+.facebook-banner {height:55px; padding:0; background:#F8F3D2; border:1px solid #F8F1C3; position:relative;}
+#wide-content .facebook-banner {float:left; margin:0 0 10px 105px;}
+.facebook-banner .vert-center {margin-bottom:-10px;} /* margin-bottom should be negative of half the content height */
+.facebook-banner .vc-content {padding:0 20px;} /* adjust top/bottom padding by changing .facebook-banner height */
+.facebook-banner strong {line-height:21px; float:left; color:#666666; font-size:100%; font-weight:bold; margin-right:15px;}
+.facebook-banner a.display-toggler {display:block; position:absolute; right:0; height:12px; width:12px; border:1px solid #cccccc; background:url("http://images.dailyradar.com/media/img/generic/small_icons/window_close_hover.png") no-repeat;}
+.facebook-banner a.display-toggler:link, .facebook-banner a.display-toggler:visited {background:url("http://images.dailyradar.com/media/img/generic/small_icons/window_close.png") no-repeat;}
+.facebook-banner a.display-toggler:hover, .facebook-banner a.display-toggler:active {background:url("http://images.dailyradar.com/media/img/generic/small_icons/window_close_hover.png") no-repeat;}
+
+#formOverlay {font-size:70%;}
+#formOverlay p {margin-bottom:0;}
+#formOverlay th, #formOverlay td {text-align:left; padding:8px 5px;}
+#formOverlay .heading {text-align:left; font-size:130%; font-weight:bold; margin-bottom:10px;}
+#formOverlay .input-title {text-align:right; font-weight:bold;}
+#formOverlay .action-row {padding-top:15px;}
+#formOverlay .action-col {padding-left:10px;}
+#formOverlay .yui-button {margin-left:0;}
+#formOverlay .fbc-button {margin-top:5px;}
+#formOverlay .right-link {text-align:right; font-size:90%;}
+#formOverlay .right-link a, #formOverlay .right-link a:link, #formOverlay .right-link a:visited {color:#888888; text-decoration:underline;}
+#formOverlay .right-link a:hover, #formOverlay .right-link a:active {color:#333333;}
+#formOverlay .hi-lite {margin-left:20px; vertical-align:top; position:relative; top:5px; padding:4px 10px; background:#F8F3D2; border:1px solid #F8F1C3; font-size:95%;}
+#formOverlay .hi-lite a {text-decoration:underline; color:#777777; font-weight:bold;}
+#formOverlay .hi-lite a:hover, #formOverlay .hi-lite a:active {color:#333333;}
+
+/*
+** footer
+*/
+#footer_wrapper {margin:0 1px; padding:0; min-height:0; padding-top:5px; background: url("http://images.dailyradar.com/media/img/gamerblips/bg/footer_top_bar.gif") repeat-x left top;}
+#footer_wrapper-2 {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/content_right.png") repeat-y top right; margin-right:-3px; padding-right:3px; min-height:0;}
+#large_footer {margin:0; padding:0; min-height:0; background-color:black;}
+#large_footer h3, #large_footer h3 a, #large_footer h3 a:link, #large_footer h3 a:visited, #large_footer h3 a:hover, #large_footer h3 a:active {margin:0 -3px 0 -3px; padding:3px; border:none; font-size:100%; font-weight:100; text-transform:uppercase;}
+#large_footer h4, #large_footer h4 a, #large_footer h4 a:link, #large_footer h4 a:visited, #large_footer h4 a:hover, #large_footer h4 active {border:none; margin:0 -3px 0 -3px; padding:3px; font-size:90%; font-weight:100; text-transform:uppercase;}
+#large_footer h5, #large_footer h5 a, #large_footer h5 a:link, #large_footer h5 a:visited, #large_footer h5 a:hover, #large_footer h5 active {border:none; margin:0 -3px 0 -3px; padding:3px; font-size:85%; font-weight:100; text-transform:uppercase;}
+
+#footer_primary {float:left; width:640px;}
+.footer_stories {float:left; width:290px; margin:20px 0px 10px 20px;}
+.footer_stories h3, .footer_stories h3 a, .footer_stories h3 a:link, .footer_stories h3 a:visited {text-decoration:none; color:#6FAADF;}
+.footer_stories h3 a:hover, .footer_stories h3 a:active, .footer_stories h4, .footer_stories h4 a, .footer_stories h4 a:link, .footer_stories h4 a:visited {text-decoration:underline;}
+.footer_stories h4, .footer_stories h4 a, .footer_stories h4 a:link, .footer_stories h4 a:visited {color:#dedede;}
+.footer_stories h4 a:hover, .footer_stories h4 a:active {background:none; text-decoration:underline; color:#6FAADF;}
+.footer_stories ol {margin:5px 0; padding-left:17px; font-size:85%; color:#dedede;}
+.footer_stories ol li {margin-top:3px;}
+.footer_stories ol a {margin-left:-7px; padding:2px;}
+.footer_stories ol a:link, .footer_stories ol a:visited {text-decoration:underline; color:#dedede;}
+.footer_stories ol a:hover, .footer_stories ol a:active { color:#6FAADF;}
+
+#footer_sidebar {float:right; width:290px; margin:10px 20px 10px 0px; line-height:12px;}
+#footer_sidebar h5 {padding:10px 3px 0px 3px; margin:0 4px; color:#6FAADF; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/footer_horiz_divider.png") repeat-x left top;}
+#footer_sidebar h5.first {background:none;}
+.footer_links {float:left; width:100%; padding:0px 0 10px 0;}
+.footer_links ul {list-style:none; padding:0; margin:0; }
+.footer_links ul li {float:left; font-size:85%; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/radar_nav_divider.png") no-repeat 100% 55%;}
+.footer_links ul li.last {background:none;}
+.footer_links ul li a {padding:2px; margin:0 5px 0 5px; white-space:nowrap;}
+.footer_links ul li a:link, .footer_links ul li a:visited {text-decoration:underline; color:#dedede;}
+.footer_links ul li a:hover, .footer_links ul li a:active { color:#6FAADF;}
+
+#footer_bottom {clear:both; position:relative; margin:20px; padding:7px 0 15px 0; border-top:1px dotted #333333; color:#dedede;}
+.copyright .df_logo {float:left; text-indent:-9000px; margin:0; padding:0; width:84px; height:60px; background: url("http://images.dailyradar.com/media/img/generic/digital_future/digital_future_logo_84x60.png") no-repeat;}
+.copyright .df_logo a {display: block; text-decoration:none; width:84px; height:60px; background: url("http://images.dailyradar.com/media/img/generic/digital_future/digital_future_logo_84x60.png") no-repeat;}
+.copyright b {float:left; margin:10px 0 0 10px; font-weight:normal; font-size:80%;}
+.copyright #dr-category {position:absolute; bottom:15px; right:0;}
+
+.disclaimer {display:none; float:left; clear:both; margin:20px 0px 10px 0px; font-weight:normal; font-size:80%; line-height:95%;}
+
+.vote-count{color:#000000;font-weight: bold;text-align: center;}
+
+/*
+** editor
+*/
+.editor-meta {margin-top: 0px; margin-bottom: 25px;}
+
+.dashboard-buttons {margin-top: -4px;}
+.yui-calendar td.calcell.calcellhover {border: 1px solid #fc0; background-color: #fc0;}
+.nonPick:hover {background: #eee url("http://images.dailyradar.com/media/img/show/pick_sprite.gif") no-repeat 5px -16px;}
+.featured-text a {color: #541B69;}
+.yui-calendar td.calcell.selected {border: 1px solid #fc0; background-color: #fc0;}
+.widget-meta a {line-height: 22px;}
+.nonPick {background: #fff url("http://images.dailyradar.com/media/img/show/pick_sprite.gif") no-repeat 5px -37px;}
+div.ballhype-vote a:hover {background-image: none;}
+#ticker {color: #666;}
+.selectedPickLoser {background: #fff url("http://images.dailyradar.com/media/img/show/pick_sprite.gif") no-repeat 5px 5px;}
+.selectedPickWinner {background: #fff url("http://images.dailyradar.com/media/img/show/pick_sprite.gif") no-repeat 5px 5px;}
+.selectedPick {background: #fff url("http://images.dailyradar.com/media/img/show/pick_sprite.gif") no-repeat 5px 5px;}
+
+.tag-cloud {text-align:center;}
+.tag-cloud a {text-decoration:none;white-space:nowrap;margin: 0 5px;}
+.tag-cloud a:hover {text-decoration:underline;}
+
+
+/*
+* GamerBlips site-specific styles
+*/
+
+body{background: #000000 url("http://images.dailyradar.com/media/img/gamerblips/bg/body.gif") 0px 175px;}
+
+body.cat_halo{background: #38342e url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/body.gif") repeat-x fixed;}
+
+body.cat_assassins_creed{background: #000000 url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/body.gif") repeat-x 50% 23px;}
+
+a, a:link, a:visited {color: #003990;}
+a:hover, a:active {color:#222222;}
+a.external:visited {color: #4FEAFF;}
+a.external:hover {color:#222222;}
+
+.cat_halo a, .cat_halo a:link, .cat_halo a:visited {color: #9b6f3f;}
+.cat_halo a:hover, .cat_halo a:active {color:#86856d;}
+.cat_halo a.external:visited {color: #D4B81E;}
+.cat_halo a.external:hover {color:#86856d;}
+
+.cat_assassins_creed a, .cat_assassins_creed a:link, .cat_assassins_creed a:visited {color: #d01a27;}
+.cat_assassins_creed a:hover, .cat_assassins_creed a:active {color:#555555;}
+.cat_assassins_creed a.external:visited {color: #8B111C;}
+.cat_assassins_creed a.external:hover {color:#555555;}
+
+.yui-navset .yui-nav a:hover {color: #003990;}
+
+/*
+** header and nav
+*/
+
+/*
+**   slimnav for blips sites
+*/
+
+/* top slim radar nav */
+#radar_nav {height:25px; line_height:25px; background:#111111 url("http://images.dailyradar.com/media/img/gamerblips/bg/slimnav_bg.gif") left bottom repeat-x;}
+#radar_nav ul {font-family: Verdana,Arial,Helvetica,sans-serif;}
+#radar_nav li { background:url("http://images.dailyradar.com/media/img/gamerblips/bg/radar_nav_divider.gif") no-repeat 0 55%;}
+#radar_nav li a:hover {color: #efd508;}
+#radar_nav_box {background:#222222; border-color:#85bf3d;}
+#radar_nav_box b {color:#02aec5;}
+
+.cat_halo #radar_nav {height:22px; line_height:22px; background:#464c3e; border-bottom:1px solid #33372D}
+.cat_halo #radar_nav ul {color:#cccccc; font-family:Verdana,Arial,Helvetica,sans-serif;}
+.cat_halo #radar_nav li { background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/slimnav_divider.png") no-repeat 0 55%;}
+.cat_halo #radar_nav li.first { background:none;}
+.cat_halo #radar_nav li.small_blips {text-indent:-9000px; width:20px; margin:auto 8px auto 16px; background:url("http://images.dailyradar.com/media/img/generic/small_icons/blips_ltgreyongrey.png") no-repeat 0 50%;}
+.cat_halo #radar_nav li a {color:#cccccc;}
+.cat_halo #radar_nav li a:hover {color: #d4c67f;}
+.cat_halo #radar_nav_box {background:#464c3e; border-color:#86856d;}
+.cat_halo #radar_nav_box b {color:#DFDDB5;}
+.cat_halo #radar_nav_box td a {color:#cccccc;}
+
+.cat_assassins_creed #radar_nav {height:22px; line_height:22px; background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/slimnav_bg.png") left bottom repeat-x; border-bottom:1px solid #666666}
+.cat_assassins_creed #radar_nav ul {color:#dddddd; font-family:Verdana,Arial,Helvetica,sans-serif;}
+.cat_assassins_creed #radar_nav li { background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/slimnav_divider.png") no-repeat 0 55%;}
+.cat_assassins_creed #radar_nav li.first { background:none;}
+.cat_assassins_creed #radar_nav li.small_blips {text-indent:-9000px; width:20px; margin:auto 8px auto 16px; background:url("http://images.dailyradar.com/media/img/generic/small_icons/blips_ltgreyongrey.png") no-repeat 0 50%;}
+.cat_assassins_creed #radar_nav li a {color:#dddddd;}
+.cat_assassins_creed #radar_nav li a:hover {color: #9B111C;}
+.cat_assassins_creed #radar_nav_box {background:#999999; border-color:#555555;}
+.cat_assassins_creed #radar_nav_box b {color:#8B111C;}
+.cat_assassins_creed #radar_nav_box td a {color:#dddddd;}
+
+/* header section */
+#header {background: transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/body_top.gif") no-repeat -55px 0px}
+#logo {margin: 18px 0 5px 68px; width: 280px; height: 57px;}
+#logo a {width:280; height:57px; background:none; }
+#tagline {top: 32px; width: 245px; font-size: 85%; left: 360px; font-weight: normal;}
+#tagline a {font-weight: normal;}
+#tagline a:link, #tagline a:visited, #tagline a:hover, #tagline a:active {color:#efd508;}
+
+.cat_halo #header {background:#38342e url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/body_top.jpg") 50% 0px;}
+.cat_halo #logo {width:327px; height:80px; background: url("http://images.dailyradar.com/media/img/gamerblips/cat_halo/logo.png") no-repeat; margin:15px 5px -10px 10px;}
+.cat_halo #logo a {width:327px; height:80px; background:none; }
+.cat_halo #tagline {display:block; left:340px; top:40px; color:#DFDDB5; width:245px; font-weight:normal;}
+.cat_halo #tagline a:link, .cat_halo #tagline a:visited, .cat_halo #tagline a:hover, .cat_halo #tagline a:active {color:#D4B81E;}
+
+.cat_assassins_creed #header { background:#dedede url("http://images.dailyradar.com/media/img/gamerblips/cat_assassins_creed/logo.jpg") no-repeat 50% -23px;}
+.cat_assassins_creed #logo {width:475px; height:80px; background:none; margin:15px 5px -10px 10px;}
+.cat_assassins_creed #logo a {width:475px; height:80px; background:none; }
+.cat_assassins_creed #tagline {display:none; left:525px; top:27px; color:#ffffff; width:188px; font-weight:normal;}
+.cat_assassins_creed #tagline a:link, .cat_assassins_creed #tagline a:visited, .cat_assassins_creed #tagline a:hover, .cat_assassins_creed #tagline a:active {color:#d31a1a;}
+
+#nav-user a.highlight, #nav-user a.highlight:link, #nav-user a.highlight:visited, #nav-user a:hover, #nav-user a:active {color: #efd508;}
+
+.cat_halo #nav-user,.cat_halo  #nav-user #username {color: #DFDDB5; font-weight:bold;}
+.cat_halo #nav-user a, .cat_halo #nav-user a:link, .cat_halo #nav-user a:visited {color: #DFDDB5; }
+.cat_halo #nav-user a.highlight, .cat_halo #nav-user a.highlight:link, .cat_halo #nav-user a.highlight:visited {color:#D4B81E;}
+.cat_halo #nav-user a:hover, .cat_halo #nav-user a:active {color: #D4B81E;}
+
+.cat_assassins_creed #nav-user,.cat_assassins_creed  #nav-user #username {color:#666666; font-weight:bold;}
+.cat_assassins_creed #nav-user a, .cat_assassins_creed #nav-user a:link, .cat_assassins_creed #nav-user a:visited {color: #666666; }
+.cat_assassins_creed #nav-user a.highlight, .cat_assassins_creed #nav-user a.highlight:link, .cat_assassins_creed #nav-user a.highlight:visited {color:#d01a27;}
+.cat_assassins_creed #nav-user a:hover, .cat_assassins_creed #nav-user a:active {color: #d01a27;}
+
+.headerFind {margin: 5px 5px 12px 0px; border: 1px solid #cccccc;}
+.headerFind input.submit {background: transparent url(http://images.dailyradar.com/media/img/gamerblips/bg/search_button_sprite.gif) no-repeat 0 0;}
+.headerFind input.submit:hover, input.submit:active {background:transparent url(http://images.dailyradar.com/media/img/gamerblips/bg/search_button_sprite.gif) no-repeat 0 -17px;}
+#tagFindInputContainer input.submit {font-weight: 300;}
+
+.cat_halo .headerFind {margin:10px 5px 0 0; background-color:#ffffff; border:none;}
+.cat_halo .headerFind input.submit {color:transparent; background:transparent url(http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/search_button_sprite.gif) no-repeat 0 0;}
+.cat_halo .headerFind input.submit:hover, .cat_halo input.submit:active {background:transparent url(http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/search_button_sprite.gif) no-repeat 0 -17px;}
+
+.cat_assassins_creed .headerFind {margin:10px 5px 0 0; background-color:#ffffff; border:1px solid #aaaaaa;}
+.cat_assassins_creed .headerFind input.submit {color:transparent; background:transparent url(http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/search_button_sprite.gif) no-repeat 0 0;}
+.cat_assassins_creed .headerFind input.submit:hover, .cat_assassins_creed input.submit:active {background:transparent url(http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/search_button_sprite.gif) no-repeat 0 -17px;}
+
+/* gamerblips nav bar */
+#nav_bar_wrapper {height:29px;}
+#nav_bar {height: 29px; margin-left: 0px; background: url("http://images.dailyradar.com/media/img/gamerblips/bg/nav_end_left.gif") no-repeat top left;}
+#nav_bar .nav_bar_top {margin-right:0px; background:none;}
+#nav_bar ul {margin: 0 15px 0 15px; background: url("http://images.dailyradar.com/media/img/gamerblips/bg/nav_bg.gif") repeat-x top left;}
+#nav_bar li {background: transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/nav_divider.gif") no-repeat 0 50%; font-family: Arial,Verdana,Helvetica,sans-serif; letter-spacing: 1px;}
+#nav_bar li.first a {margin-left:-10px;}
+#nav_bar li a {color:#02aec5; padding:0 15px 0 17px; }
+#nav_bar li a:hover {color: #85bf3d;}
+#nav_bar li ul li {background: url("http://images.dailyradar.com/media/img/gamerblips/bg/nav_bg.gif") repeat top left;}
+#nav_bar li.selected a:active, #nav_bar li.selected a, #nav_bar li.selected a:hover {color: #85bf3d;}
+#nav_bar li.selected ul li a {color:#02aec5;}
+#nav_bar li.selected ul li.selected a {color:#85bf3d;}
+#nav_bar .submit_story {background: url("http://images.dailyradar.com/media/img/gamerblips/bg/submit_story_button_hover.gif") no-repeat right top; right: 0px; color: #85bf3d; height: 29px;}
+#nav_bar .submit_story a {height: 29px;}
+
+/* haloblips nav bar */
+.cat_halo #nav_bar_wrapper {height:34px;}
+.cat_halo #nav_bar {position:relative; top:3px; height:34px; margin-left:-3px; text-transform:uppercase; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/nav_end_left.png") no-repeat top left;}
+.cat_halo #nav_bar .nav_bar_top {margin-right:-3px; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/nav_end_right.png") no-repeat top right;}
+.cat_halo #nav_bar ul {background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/nav_bg.png") repeat-x top left; height:34px; margin:0 17px 0 17px;}
+.cat_halo #nav_bar li {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/nav_divider.png") no-repeat 0 35%; line-height:31px; font-size:105%; font-family:Verdana,Arial,Helvetica,sans-serif; letter-spacing:.5px;}
+.cat_halo #nav_bar li.first  {background:none;}
+.cat_halo #nav_bar li h3 {margin:0;}
+.cat_halo #nav_bar li.first a {margin-left:-12px;}
+.cat_halo #nav_bar li.last a {text-transform:none;}
+.cat_halo #nav_bar li a {color:#ffffff; padding:0 5px 0 11px; font-weight:bold; text-transform:uppercase;}
+.cat_halo #nav_bar li a:hover {color: #363636;}
+.cat_halo #nav_bar li ul {margin-top:-3px; text-transform:uppercase;}
+.cat_halo #nav_bar li ul li {width:125px; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/nav_bg.gif") repeat top left; font-size:90%;}
+.cat_halo #nav_bar li.selected a, .cat_halo #nav_bar li.selected a:hover, .cat_halo #nav_bar li.selected a:active {color:#363636; background:transparent;}
+.cat_halo #nav_bar li.selected ul li a, .cat_halo #nav_bar li.selected ul li.selected a {color:#363636;}
+.cat_halo #nav_bar .submit_story {right:3px; margin:0px 10px 0 0; color:#363636; width:125px; height:30px; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/submit_story_button_hover.png") no-repeat right top;}
+.cat_halo #nav_bar .submit_story a {height:30px; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/submit_story_button.png") no-repeat right top;}
+.cat_halo #nav_bar .submit_story a:hover, .cat_halo #nav_bar .submit_story a:active {background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/submit_story_button_hover.png") no-repeat right top;}
+
+/* assassins_creedblips nav bar */
+.cat_assassins_creed #nav_bar_wrapper {height:34px;}
+.cat_assassins_creed #nav_bar {position:relative; top:3px; height:34px; margin-left:-3px; text-transform:uppercase; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/nav_end_left.png") no-repeat top left;}
+.cat_assassins_creed #nav_bar .nav_bar_top {margin-right:-3px; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/nav_end_right.png") no-repeat top right;}
+.cat_assassins_creed #nav_bar ul {background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/nav_bg.png") repeat-x top left; height:34px; margin:0 17px 0 17px;}
+.cat_assassins_creed #nav_bar li {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/nav_divider.png") no-repeat 0 3px; line-height:28px; padding-top:3px; font-size:105%; font-family:Verdana,Arial,Helvetica,sans-serif; letter-spacing:.5px;}
+.cat_assassins_creed #nav_bar li.first  {background:none;}
+.cat_assassins_creed #nav_bar li h3 {margin:0;}
+.cat_assassins_creed #nav_bar li.first a {margin-left:-6px;}
+.cat_assassins_creed #nav_bar li.last a {text-transform:none;}
+.cat_assassins_creed #nav_bar li a {color:#cccccc; padding:0 5px 0 11px; font-weight:normal; text-transform:uppercase;}
+.cat_assassins_creed #nav_bar li a:hover {color: #ffffff;}
+.cat_assassins_creed #nav_bar li ul {margin-top:-3px; text-transform:uppercase;}
+.cat_assassins_creed #nav_bar li ul li {width:125px; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/nav_bg.gif") repeat top left; font-size:90%;}
+.cat_assassins_creed #nav_bar li.selected a, .cat_assassins_creed #nav_bar li.selected a:hover, .cat_assassins_creed #nav_bar li.selected a:active {color:#ffffff; background:transparent;}
+.cat_assassins_creed #nav_bar li.selected ul li a, .cat_assassins_creed #nav_bar li.selected ul li.selected a {color:#ffffff;}
+.cat_assassins_creed #nav_bar .submit_story {right:3px; margin:1px 0px 0 0; color:#ffffff; width:166px; height:30px; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/submit_story_button_hover.png") no-repeat right top;}
+.cat_assassins_creed #nav_bar .submit_story a {height:30px; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/submit_story_button.png") no-repeat right top;}
+.cat_assassins_creed #nav_bar .submit_story a:hover, .cat_assassins_creed #nav_bar .submit_story a:active {background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/submit_story_button_hover.png") no-repeat right top;}
+
+/*
+** content wrappers
+*/
+#content {margin:0; padding:0;}
+#content-3 {background:transparent; margin-left:-3px; padding-left:4px;}
+#content-4 {background:transparent; margin-right:-3px; padding-right:3px;}
+
+.cat_halo #content {margin:0; padding:0;}
+.cat_halo #content-3 {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/content_left.png") repeat-y top left; margin-left:-4px; padding-left:4px;}
+.cat_halo #content-4 {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/content_right.png") repeat-y top right; margin-right:-3px; padding-right:3px;}
+
+.cat_assassins_creed #content {margin:0; padding:0;}
+.cat_assassins_creed #content-3 {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/content_left.png") repeat-y top left; margin-left:-4px; padding-left:4px;}
+.cat_assassins_creed #content-4 {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/content_right.png") repeat-y top right; margin-right:-3px; padding-right:3px;}
+
+#inner-content {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/content_top_inner.gif") repeat-x top left; padding-bottom:15px;}
+
+/* page heading and tabs */
+ul.cc-tab li a {background: url("http://images.dailyradar.com/media/img/gamerblips/bg/tab_sprite.gif") no-repeat 0 0; width: 146px; color: #333333;}
+ul.cc-tab li.cc-tab-on a {background: url("http://images.dailyradar.com/media/img/gamerblips/bg/tab_sprite.gif") no-repeat 0 -48px;}
+ul.cc-tab li a:hover {background:url("http://images.dailyradar.com/media/img/gamerblips/bg/tab_sprite.gif") no-repeat 0 -24px;color:#333333;}
+
+.cat_assassins_creed ul.cc-tab {background:url("http://images.dailyradar.com/media/img/gamerblips/bg/tabs_shadow.gif") no-repeat;}
+.cat_assassins_creed ul.cc-tab li a {width:146px; line-height:24px; height:24px; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/tab_sprite.gif") no-repeat 0 0;color:#666666;font-weight:bold;text-transform:uppercase;font-size:85%;}
+.cat_assassins_creed ul.cc-tab li.cc-tab-on a {background:url("http://images.dailyradar.com/media/img/gamerblips/bg/tab_sprite.gif") no-repeat 0 -48px;color:#fff;}
+.cat_assassins_creed ul.cc-tab li a:hover {background:url("http://images.dailyradar.com/media/img/gamerblips/bg/tab_sprite.gif") no-repeat 0 -24px;color:#444444;}
+
+.right-nav {font-weight: 700; color: #999999;}
+.right-nav a, .right-nav a:link, .right-nav a:visited {color:#efd508;}
+.right-nav a:hover, .right-nav a:active {color:#05a5bb;}
+
+.cat_halo .right-nav {color:#999999; font-size:85%; font-weight:700;}
+.cat_halo .right-nav a, .cat_halo .right-nav a:link, .cat_halo .right-nav a:visited {color:#9b6f3f;}
+.cat_halo .right-nav a:hover, .cat_halo .right-nav a:active {color:#666666;}
+
+.cat_assassins_creed .right-nav {color:#999999; font-size:85%; font-weight:700;}
+.cat_assassins_creed .right-nav a, .cat_assassins_creed .right-nav a:link, .cat_assassins_creed .right-nav a:visited {color:#999999;}
+.cat_assassins_creed .right-nav a:hover, .cat_assassins_creed .right-nav a:active {color:#666666;}
+
+/*
+** story/post
+*/
+.content-box {border-color:#cccccc;}
+
+
+.cat_halo .post-list {margin-top:-2px;}
+
+.cat_assassins_creed .post-list {margin-top:-2px;}
+
+div.story-head {font-size: 175%; font-weight: normal; font-family: Arial,Verdana,Helvetica,sans-serif;}
+.post-list .story-head {font-size:165%;}
+.post-cluster .story-head {font-size:145%;}
+.post-cluster .weak-child .story-head {font-size:125%;}
+div.story-head a:link, div.story-head a.external:link, div.story-head a:visited {color:#05a5bb;}
+div.story-head a.external:visited {color:#4FEAFF;}
+div.story-head a.external:hover, div.story-head a:hover, div.story-head a:active {color: #222222;}
+.post-cluster div.story-head a:link, .post-cluster div.story-head a.external:link, .post-cluster div.story-head a:visited {color:#003990;}
+.post-cluster div.story-head a.external:visited {color:#4FEAFF;}
+.post-cluster div.story-head a:hover, .post-cluster div.story-head a.external:hover, .post-cluster div.story-head a:active, .post-cluster div.story-head a.external:active {color:#333333;}
+
+.cat_halo div.story-head {color:#333333; font-size:175%; font-weight:normal; font-family:Arial,Verdana,Helvetica,sans-serif;}
+.cat_halo .post-list .story-head {font-size:175%;}
+.cat_halo .post-cluster .story-head {font-size:145%;}
+.cat_halo .post-cluster .weak-child .story-head {font-size:125%;}
+.cat_halo div.story-head a:link, .cat_halo div.story-head a.external:link, .cat_halo div.story-head a:visited {color:#9b6f3f; text-decoration:underline;}
+.cat_halo div.story-head a.external:visited {color:#D4B81E;text-decoration:underline;}
+.cat_halo div.story-head a.external:hover, .cat_halo div.story-head a:active, .cat_halo div.story-head a:hover {color: #86856d; border-bottom: 0; text-decoration: underline;}
+
+.cat_assassins_creed div.story-head {color:#333333; font-size:175%; font-weight:normal; font-family:Arial,Verdana,Helvetica,sans-serif;}
+.cat_assassins_creed .post-list .story-head {font-size:175%;}
+.cat_assassins_creed .post-cluster .story-head {font-size:145%;}
+.cat_assassins_creed .post-cluster .weak-child .story-head {font-size:125%;}
+.cat_assassins_creed div.story-head a:link, .cat_assassins_creed div.story-head a.external:link, .cat_assassins_creed div.story-head a:visited {color:#d01a27; text-decoration:underline;}
+.cat_assassins_creed div.story-head a.external:visited {color:#8B111C;text-decoration:underline;}
+.cat_assassins_creed div.story-head a:hover, .cat_assassins_creed div.story-head a.external:hover {text-decoration: underline; border-bottom: 0; color: #555555;}
+div.story-head a.external:active {border-bottom: 0; color: #555555;}
+.cat_assassins_creed div.story-head a:active {text-decoration: underline; border-bottom: 0; color: #555555;}
+
+div.summary a, div.summary a:link, div.summary a:visited {color:#003990;}
+
+.cat_halo div.summary a, .cat_halo div.summary a:link, .cat_halo div.summary a:visited {color:#9b6f3f;}
+.cat_halo div.summary a:hover, .cat_halo div.summary a:active {color:#86856d;}
+
+.cat_assassins_creed div.summary a, .cat_assassins_creed div.summary a:link, .cat_assassins_creed div.summary a:visited {color:#d01a27;}
+.cat_assassins_creed div.summary a:hover, .cat_assassins_creed div.summary a:active {color:#555555;}
+
+
+span.new-comment-flag {color: #ff9900;}
+p.share span.tag a{border-color:#dddddd;}
+
+/* voting widget */
+div.stry .widget {top: -10px; left: -10px;}
+.story .voting_up {position:absolute; left:-5px; top:-10px;}
+.voting_up .points_count {font-size: 90%; color: #003990;}
+
+/* voting widget - haloblips */
+.cat_halo div.stry .widget {background:#ffffff; position:relative; left:-10px; top:-10px;}
+.cat_halo .story .voting_up {position:absolute; left:-5px; top:-10px;}
+.cat_halo .voting_up, .cat_halo .voting_up.selected {width:60px; height:60px; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/voting/cat_halo/large_vote_sprite.gif") no-repeat 0 -60px;}
+.cat_halo .voting_up a, .cat_halo .voting_up a:link, .cat_halo .voting_up a:visited {height:60px; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/voting/cat_halo/large_vote_sprite.gif") no-repeat 0 0;}
+.cat_halo .voting_up a:hover, .cat_halo .voting_up a:active, .cat_halo .voting_up.selected a, .cat_halo .voting_up.selected a:link, .cat_halo .voting_up.selected a:visited, .cat_halo .voting_up.selected a:hover, .cat_halo .voting_up.selected a:active {height:60px; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/voting/cat_halo/large_vote_sprite.gif") no-repeat 0 -60px;}
+.cat_halo .voting_up .points_count {width:60px; color:#ffffff; bottom:23px; font-size:90%; font-weight:700;}
+
+/* voting widget - assassins_creedblips */
+.cat_assassins_creed div.stry .widget {background:#ffffff; position:relative; left:-10px; top:-10px;}
+.cat_assassins_creed .story .voting_up {position:absolute; left:-5px; top:-10px;}
+.cat_assassins_creed .voting_up, .cat_assassins_creed .voting_up.selected {width:60px; height:60px; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/voting/cat_assassins_creed/large_vote_sprite.gif") no-repeat 0 -60px;}
+.cat_assassins_creed .voting_up a, .cat_assassins_creed .voting_up a:link, .cat_assassins_creed .voting_up a:visited {height:60px; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/voting/cat_assassins_creed/large_vote_sprite.gif") no-repeat 0 0;}
+.cat_assassins_creed .voting_up a:hover, .cat_assassins_creed .voting_up a:active, .cat_assassins_creed .voting_up.selected a, .cat_assassins_creed .voting_up.selected a:link, .cat_assassins_creed .voting_up.selected a:visited, .cat_assassins_creed .voting_up.selected a:hover, .cat_assassins_creed .voting_up.selected a:active {height:60px; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/voting/cat_assassins_creed/large_vote_sprite.gif") no-repeat 0 -60px;}
+.cat_assassins_creed .voting_up .points_count {width:60px; color:#ffffff; bottom:23px; font-size:90%; font-weight:700;}
+
+div.stry .widget .center {width: 29px;}
+div.stry .widget .center a, div.stry .widget .center a:link, div.stry .widget .center a:visited {color:#003990;}
+
+.cat_halo div.stry .widget .center a, .cat_halo div.stry .widget .center a:link, .cat_halo div.stry .widget .center a:visited {color:#9b6f3f;  position:relative; left:10px; top:10px;}
+.cat_halo div.stry .widget .center a:hover, .cat_halo div.stry .widget .center a:active, .cat_halo div.stry .widget .center a.visited:hover, .cat_halo div.stry .widget .center a.visited:active {color:#86856d;}
+
+.cat_assassins_creed div.stry .widget .center a, .cat_assassins_creed div.stry .widget .center a:link, .cat_assassins_creed div.stry .widget .center a:visited {color:#d01a27;  position:relative; left:10px; top:10px;}
+.cat_assassins_creed div.stry .widget .center a:hover, .cat_assassins_creed div.stry .widget .center a:active, .cat_assassins_creed div.stry .widget .center a.visited:hover, .cat_assassins_creed div.stry .widget .center a.visited:active {color:#555555;}
+
+.post-cluster .voting_up a, .post-cluster .voting_up a:link, .post-cluster .voting_up a:visited {width:50px; height:50px; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/voting/small_vote_sprite.gif") no-repeat 0 0;}
+.post-cluster .voting_up a:hover, .post-cluster .voting_up a:active, .post-cluster .voting_up.selected a {width:50px; height:50px; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/voting/small_vote_sprite.gif") no-repeat 0 -50px;}
+.post-cluster .voting_up .points_count {font-size: 80%; color: #ffffff;}
+
+/* haloblips */
+.cat_halo .post-cluster .voting_up {background: none;}
+.cat_halo .post-cluster .voting_up a, .cat_halo .post-cluster .voting_up a:link, .cat_halo .post-cluster .voting_up a:visited {width:50px; height:50px; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/voting/cat_halo/small_vote_sprite.gif") no-repeat 0 0;}
+.cat_halo .post-cluster .voting_up a:hover, .cat_halo .post-cluster .voting_up a:active, .cat_halo .post-cluster .voting_up.selected a {width:50px; height:50px; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/voting/cat_halo/small_vote_sprite.gif") no-repeat 0 -50px;}
+.cat_halo .post-cluster .voting_up .points_count {width:50px; bottom:29px; font-size:75%;}
+
+/* assassins_creedblips */
+.cat_assassins_creed .post-cluster .voting_up {background: none;}
+.cat_assassins_creed .post-cluster .voting_up a, .cat_assassins_creed .post-cluster .voting_up a:link, .cat_assassins_creed .post-cluster .voting_up a:visited {width:50px; height:50px; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/voting/cat_assassins_creed/small_vote_sprite.gif") no-repeat 0 0;}
+.cat_assassins_creed .post-cluster .voting_up a:hover, .cat_assassins_creed .post-cluster .voting_up a:active, .cat_assassins_creed .post-cluster .voting_up.selected a {width:50px; height:50px; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/voting/cat_assassins_creed/small_vote_sprite.gif") no-repeat 0 -50px;}
+.cat_assassins_creed .post-cluster .voting_up .points_count {width:50px; bottom:29px; font-size:75%;}
+
+/*
+** comments and links
+*/
+
+.comment_list .featured-comment .comment-header {background-color:#f2de3c;}
+.comment_list .featured-comment .comment-header a, .comment_list .featured-comment .comment-header a:link, .comment_list .featured-comment .comment-header a:visited {color:#003990;}
+.featured-comment .comment-body {color:#ffffff; background:#6d6d6d url("http://images.dailyradar.com/media/img/gamerblips/bg/featured_quotes.gif") no-repeat 5px 8px; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:105%; letter-spacing:.5px;}
+.featured-comment .comment-text {padding-top:5px; padding-right:20px;}
+.featured-comment a.featured-commenter {margin-top:10px;}
+.featured-comment a.featured-commenter:visited, .featured-comment a.featured-commenter, .featured-comment a.featured-commenter:link {font-weight: 100; color: #bbbbbb; letter-spacing: normal;}
+.featured-comment a.featured-commenter:hover, .featured-comment a.featured-commenter:active {color:#ffffff;}
+.featured-comment .box_content {padding:7px; border:none;}
+.comment_list .featured-comment .box_content {padding:7px;}
+.featured-comment {padding: 0; margin: 10px 10px 10px 0;}
+.comment-respond {width:60px; height:63px; background: url("http://images.dailyradar.com/media/img/gamerblips//bg/featured_respond_sprite.gif") no-repeat 0 -63px; margin:0 -2px -5px 0;}
+.comment-respond a, .comment-respond a:link, .comment-respond a:visited {width:60px; height:63px; background: url("http://images.dailyradar.com/media/img/gamerblips//bg/featured_respond_sprite.gif") no-repeat 0 0;}
+.comment-respond a:hover, .comment-respond a:active {width:60px; height:63px; background: url("http://images.dailyradar.com/media/img/gamerblips//bg/featured_respond_sprite.gif") no-repeat 0 -63px;}
+div.comment-meta {color:#ffffff;}
+
+.cat_halo .comment_list .featured-comment .comment-header {background-color:#86856d;}
+.cat_halo .comment_list .featured-comment .comment-header a, .cat_halo .comment_list .featured-comment .comment-header a:link, .cat_halo .comment_list .featured-comment .comment-header a:visited {color:#273a29;}
+.cat_halo .featured-comment .comment-body {color:#333333; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/featured_quotes.png") no-repeat 5px 5px; font-family:Georgia, "Times New Roman",Garamond, serif; font-size:105%; letter-spacing:.5px; padding-left:35px;}
+.cat_halo .featured-comment a.featured-commenter, .cat_halo .featured-comment a.featured-commenter:link, .cat_halo .featured-comment a.featured-commenter:visited {color:#cccccc; font-size:90%; font-weight:100; letter-spacing:normal;}
+.cat_halo .featured-comment a.featured-commenter:hover, .cat_halo .featured-comment a.featured-commenter:active {color:#666666;}
+.cat_halo .featured-comment .box_top_left, .cat_halo .featured-comment .box_top, .cat_halo .featured-comment .box_top_right, .cat_halo .featured-comment .box_bottom_left, .cat_halo .featured-comment .box_bottom, .cat_halo .featured-comment .box_bottom_right, .cat_halo .featured-comment .box_right, .cat_halo .featured-comment .box_left {background:none;}
+.cat_halo .featured-comment .box_content {border:3px solid #D4B81E;}
+.cat_halo .comment-respond {height:21px;background: url("http://images.dailyradar.com/media/img/gamerblips//bg/cat_halo/featured_respond_sprite.png") no-repeat 0 -21px; width:71px;}
+.cat_halo .comment-respond a, .cat_halo .comment-respond a:link, .cat_halo .comment-respond a:visited {width:71px; height:21px;background: url("http://images.dailyradar.com/media/img/gamerblips//bg/cat_halo/featured_respond_sprite.png") no-repeat 0 0;}
+.cat_halo .comment-respond a:hover, .cat_halo .comment-respond a:active {height:21px;background: url("http://images.dailyradar.com/media/img/gamerblips//bg/cat_halo/featured_respond_sprite.png") no-repeat 0 -21px;}
+
+.cat_assassins_creed .comment_list .featured-comment .comment-header {background-color:#555555;}
+.cat_assassins_creed .comment_list .featured-comment .comment-header a, .cat_assassins_creed .comment_list .featured-comment .comment-header a:link, .cat_assassins_creed .comment_list .featured-comment .comment-header a:visited {color:#d01a27;}
+.cat_assassins_creed .featured-comment .comment-body {color:#333333; background:#ffffff url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/featured_quotes.png") no-repeat 5px 5px; font-family:Georgia, "Times New Roman",Garamond, serif; font-size:105%; letter-spacing:.5px; padding-left:35px;}
+.cat_assassins_creed .featured-comment a.featured-commenter, .cat_assassins_creed .featured-comment a.featured-commenter:link, .cat_assassins_creed .featured-comment a.featured-commenter:visited {color:#666666; font-size:90%; font-weight:100; letter-spacing:normal;}
+.cat_assassins_creed .featured-comment a.featured-commenter:hover, .cat_assassins_creed .featured-comment a.featured-commenter:active {color:#666666;}
+.cat_assassins_creed .featured-comment .box_top_left, .cat_assassins_creed .featured-comment .box_top, .cat_assassins_creed .featured-comment .box_top_right, .cat_assassins_creed .featured-comment .box_bottom_left, .cat_assassins_creed .featured-comment .box_bottom, .cat_assassins_creed .featured-comment .box_bottom_right, .cat_assassins_creed .featured-comment .box_right, .cat_assassins_creed .featured-comment .box_left {background:none;}
+.cat_assassins_creed .featured-comment .box_content {border:5px solid #aaaaaa;}
+.cat_assassins_creed .comment-respond {height:21px;background: url("http://images.dailyradar.com/media/img/gamerblips//bg/cat_assassins_creed/featured_respond_sprite.gif") no-repeat 0 -21px; width:71px;}
+.cat_assassins_creed .comment-respond a, .cat_assassins_creed .comment-respond a:link, .cat_assassins_creed .comment-respond a:visited {width:71px; height:21px;background: url("http://images.dailyradar.com/media/img/gamerblips//bg/cat_assassins_creed/featured_respond_sprite.gif") no-repeat 0 0;}
+.cat_assassins_creed .comment-respond a:hover, .cat_assassins_creed .comment-respond a:active {height:21px;background: url("http://images.dailyradar.com/media/img/gamerblips//bg/cat_assassins_creed/featured_respond_sprite.gif") no-repeat 0 -21px;}
+
+
+.blog-disc a.post_url, .blog-disc a.post_url:link, .blog-disc a.post_url:visited {color:#05a5bb;}
+.cat_halo .blog-disc a.post_url, .cat_halo .blog-disc a.post_url:link, .cat_halo .blog-disc a.post_url:visited {color:#9b6f3f;}
+.cat_assassins_creed .blog-disc a.post_url, .cat_assassins_creed .blog-disc a.post_url:link, .cat_assassins_creed .blog-disc a.post_url:visited {color:#d01a27;}
+
+/*
+** bar graph
+*/
+
+/*
+** sidebar
+*/
+.sidebar-gradient {background:url("http://images.dailyradar.com/media/img/gamerblips/bg/r_gradient.png") no-repeat bottom;}
+
+.sidebarUser {background: url("http://images.dailyradar.com/media/img/gamerblips/bg/r_gradient.png") no-repeat bottom;}
+.headerbar {background: url("http://images.dailyradar.com/media/img/gamerblips/bg/headerbar.gif") no-repeat -1px -1px; color: #003990;}
+.self-headerbar {background: url("http://images.dailyradar.com/media/img/gamerblips/bg/headerbar_self.gif") no-repeat -1px -1px; color: #003990;}
+.self-headerbar td a, .self-headerbar td a:link, .self-headerbar td a:visited {color:#666666;}
+.self-headerbar td a:hover, .self-headerbar td a:active {color:#888888;}
+
+.cat_halo .headerbar {color:#ffffff; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/headerbar.gif") no-repeat -1px -1px;width:300px;height:25px;}
+.cat_halo .self-headerbar {color:#ffffff; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/headerbar_self.gif") no-repeat -1px -1px;}
+.cat_halo .self-headerbar a:hover, .cat_halo .self-headerbar a:active {color:#ffffff;}
+.cat_halo .self-headerbar td a, .cat_halo .self-headerbar td a:link, .cat_halo .self-headerbar td a:visited {color:#dddddd;}
+.cat_halo .self-headerbar td a:hover, .cat_halo .self-headerbar td a:active {color:#ffffff;}
+.cat_halo .headerbar td a, .cat_halo .headerbar td a:link, .cat_halo .headerbar td a:visited {color:#dddddd;}
+.cat_halo .headerbar td a:hover, .cat_halo .headerbar td a:active {color:#ffffff;}
+
+.cat_assassins_creed .headerbar {color:#ffffff; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/headerbar.gif") no-repeat -1px -1px;width:300px;height:25px;}
+.cat_assassins_creed .self-headerbar {color:#ffffff; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/headerbar_self.gif") no-repeat -1px -1px;}
+.cat_assassins_creed .self-headerbar a:hover, .cat_assassins_creed .self-headerbar a:active {color:#ffffff;}
+.cat_assassins_creed .self-headerbar td a, .cat_assassins_creed .self-headerbar td a:link, .cat_assassins_creed .self-headerbar td a:visited {color:#cccccc;}
+.cat_assassins_creed .self-headerbar td a:hover, .cat_assassins_creed .self-headerbar td a:active {color:#ffffff;}
+.cat_assassins_creed .headerbar td a, .cat_assassins_creed .headerbar td a:link, .cat_assassins_creed .headerbar td a:visited {color:#cccccc;}
+.cat_assassins_creed .headerbar td a:hover, .cat_assassins_creed .headerbar td a:active {color:#ffffff;}
+
+.sidebarUser .header {color: #003990; background: url("http://images.dailyradar.com/media/img/gamerblips/bg/headerbar.gif") no-repeat;}
+.sidebarUser .header h3, .sidebarUser .header b {color: #003990;}
+.sidebarUser table.calendar td a {color:#003990;}
+.sidebarUser table.calendar td a:hover {background-color:#fc0;}
+
+.cat_halo .sidebarUser .header {;color:#ffffff; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/headerbar.gif") no-repeat;}
+.cat_halo .sidebarUser .header b, .cat_halo .sidebarUser .header h3 {color:#ffffff; font-size: 100%;}
+.cat_halo .sidebarUser .header a {color: #cccccc;}
+.cat_halo .sidebarUser .header a:hover {color:#ffffff;}
+
+.cat_halo .sidebarUser table.calendar td a {color:#cccccc;}
+.cat_halo .sidebarUser table.calendar td a:hover {background-color:#ffffff;}
+
+.cat_assassins_creed .sidebarUser .header {;color:#ffffff; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/headerbar.gif") no-repeat;}
+.cat_assassins_creed .sidebarUser .header b, .cat_assassins_creed .sidebarUser .header h3 {color:#ffffff; font-size: 100%;}
+.cat_assassins_creed .sidebarUser .header a {color: #cccccc;}
+.cat_assassins_creed .sidebarUser .header a:hover {color:#ffffff;}
+
+.cat_assassins_creed .sidebarUser table.calendar td a {color:#cccccc;}
+.cat_assassins_creed .sidebarUser table.calendar td a:hover {background-color:#ffffff;}
+
+div.ballhype-vote {top: -8px; left: -9px; background: url("http://images.dailyradar.com/media/img/gamerblips/voting/small_vote_sprite_blue.gif") no-repeat 0 -50px; width: 36px;}
+div.ballhype-vote a {background: url("http://images.dailyradar.com/media/img/gamerblips/voting/small_vote_sprite_blue.gif") no-repeat;}
+div.ballhype-vote a:hover {color: #000;}
+
+div.sidebar-post-group .post-data, div.related-post-group .post-data {margin-left: 36px;}
+div.sidebar-post-group span.ballhype-vote-score {position: absolute; margin: 0; bottom: 18px; color: #ffffff; font-weight: bold; width: 50px; font-size: 75%;}
+div.sidebar-post-group h4 a, div.sidebar-post-group h4 a:link, div.sidebar-post-group h4 a:visited {color:#a3cc6b;}
+div.sidebar-post-group h4 a:hover, div.sidebar-post-group h4 a.external:hover, div.sidebar-post-group h4 a:active, div.sidebar-post-group h4 a.external:active {text-decoration: underline; color:#222222;}
+
+.cat_halo div.sidebar-post-group h4 a, .cat_halo div.sidebar-post-group h4 a:link, .cat_halo div.sidebar-post-group h4 a:visited {color:#9b6f3f;}
+.cat_halo div.sidebar-post-group h4 a:hover, .cat_halo div.sidebar-post-group h4 a.external:hover, .cat_halo div.sidebar-post-group h4 a:active, .cat_halo div.sidebar-post-group h4 a.external:active {text-decoration: underline; color:#86856d;}
+
+/* haloblips */
+.cat_halo div.ballhype-vote {position:relative; top:-5px; left:-10px; background: url("http://images.dailyradar.com/media/img/gamerblips/voting/cat_halo/small_vote_sprite.gif") no-repeat 0 -50px; width:40px; height:50px;}
+.cat_halo div.ballhype-vote a {background: url("http://images.dailyradar.com/media/img/gamerblips/voting/cat_halo/small_vote_sprite.gif") no-repeat;color: #333;text-decoration:none;}
+.cat_halo div.ballhype-vote a:hover {background-image: none;color: #000;text-decoration:none;}
+.cat_halo div.sidebar-post-group span.ballhype-vote-score {font-size:75%; font-weight:bold; color:#ffffff; margin:0; position:absolute; bottom:18px; width:50px; text-align:center;}
+
+.cat_assassins_creed div.sidebar-post-group h4 a, .cat_assassins_creed div.sidebar-post-group h4 a:link, .cat_assassins_creed div.sidebar-post-group h4 a:visited {color:#d01a27;}
+.cat_assassins_creed div.sidebar-post-group h4 a:hover, .cat_assassins_creed div.sidebar-post-group h4 a.external:hover, .cat_assassins_creed div.sidebar-post-group h4 a:active, .cat_assassins_creed div.sidebar-post-group h4 a.external:active {text-decoration: underline; color:#555555;}
+
+/* assassins_creedblips */
+.cat_assassins_creed div.ballhype-vote {position:relative; top:-5px; left:-10px; background: url("http://images.dailyradar.com/media/img/gamerblips/voting/cat_assassins_creed/small_vote_sprite.gif") no-repeat 0 -50px; width:40px; height:50px;}
+.cat_assassins_creed div.ballhype-vote a {background: url("http://images.dailyradar.com/media/img/gamerblips/voting/cat_assassins_creed/small_vote_sprite.gif") no-repeat;color: #333;text-decoration:none;}
+.cat_assassins_creed div.ballhype-vote a:hover {background-image: none;color: #000;text-decoration:none;}
+.cat_assassins_creed div.sidebar-post-group span.ballhype-vote-score {font-size:75%; font-weight:bold; color:#ffffff; margin:0; position:absolute; bottom:18px; width:50px; text-align:center;}
+
+/*
+** image cloud
+*/
+
+/*
+** pagination
+*/
+.page_numbering {font-weight: 700;}
+
+.cat_halo a.pageLink {color:#666666; background-color:#ffffff; font-weight: 700; text-decoration:underline; text-transform:uppercase;}
+
+.cat_assassins_creed a.pageLink {color:#666666; background-color:#ffffff; font-weight: 700; text-decoration:underline; text-transform:uppercase;}
+
+/*
+** footer
+*/
+#footer_wrapper {background:transparent; margin:0 0 0 -3px; padding-top:0; padding-left:3px;}
+#footer_wrapper-2 {background: transparent;}
+
+#large_footer {background-color:#090f12;border-top:5px solid #6d6d6d; }
+#large_footer h3 a:active, #large_footer h3 a, #large_footer h3 a:link, #large_footer h3 a:visited, #large_footer h3 a:hover, #large_footer h3 {font-weight: 700; font-size: 95%;}
+#large_footer h5 a:hover, #large_footer h5 a:visited, #large_footer h5 a:link, #large_footer h5 active, #large_footer h5 a, #large_footer h5 {font-weight: 700;}
+.footer_stories h3 a:visited, .footer_stories h3, .footer_stories h3 a:link, .footer_stories h3 a, .footer_stories h3 a:hover, .footer_stories h3 a:active {color: #a1d4e8;}
+.footer_stories h4, .footer_stories h4 a, .footer_stories h4 a:link, .footer_stories h4 a:visited {color:#dfdfdf; text-decoration:none;}
+.footer_stories h4 a:hover, .footer_stories h4 a:active {color: #85bf3d;}
+.footer_stories ol {color:#dfdfdf;}
+.footer_stories ol a:link, .footer_stories ol a:visited {color: #dfdfdf;}
+.footer_stories ol a:hover, .footer_stories ol a:active {color:#85bf3d; text-decoration:underline;}
+#footer_sidebar h5 {color: #a1d4e8;}
+.footer_links ul li {background:url("http://images.dailyradar.com/media/img/gamerblips/bg/footer_links_divider.png") no-repeat 100% 50%;}
+.footer_links ul li a:link, .footer_links ul li a:visited {color: #dfdfdf;}
+.footer_links ul li a:hover, .footer_links ul li a:active {color:#85bf3d; text-decoration:underline;}
+#footer_bottom {color:#dfdfdf; border-color:#6d6d6d;}
+.copyright {color:#dfdfdf;}
+
+/* haloblips footer */
+.cat_halo #footer_wrapper {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/content_left.png") repeat-y top left; margin:0 0 0 -3px; padding-top:0; padding-left:3px;}
+.cat_halo #footer_wrapper-2 {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/content_right.png") repeat-y top right; margin-right:-3px; padding-right:3px;}
+
+.cat_halo #large_footer {background: #dfdfd9; border-top:5px solid #93693C;}
+.cat_halo #footer_sidebar h5 {color:#9b6f3f; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/footer_horiz_divider.png") repeat-x left top;}
+.cat_halo #footer_sidebar h5.first {background:none;}
+.cat_halo .footer_stories h3, .cat_halo .footer_stories h3 a, .cat_halo .footer_stories h3 a:link, .cat_halo .footer_stories h3 a:visited {color:#9b6f3f; text-decoration:none;}
+.cat_halo .footer_stories h3 a:hover, .cat_halo .footer_stories h3 a:active {color:#9b6f3f; text-decoration: underline;}
+.cat_halo .footer_stories h4, .cat_halo .footer_stories h4 a, .cat_halo .footer_stories h4 a:link, .cat_halo .footer_stories h4 a:visited {color:#9b6f3f; text-decoration:none;}
+.cat_halo .footer_stories h4 a:hover, .cat_halo .footer_stories h4 a:active {color:#9b6f3f; text-decoration: underline;}
+.cat_halo .footer_stories ol {color:#666666;}
+.cat_halo .footer_stories ol a:link, .cat_halo .footer_stories ol a:visited {color:#666666; text-decoration:none;}
+.cat_halo .footer_stories ol a:hover, .cat_halo .footer_stories ol a:active {color:#666666; text-decoration:underline;}
+.cat_halo .footer_links ul li {background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/footer_links_divider.png") no-repeat 100% 55%;}
+.cat_halo .footer_links ul li.last {background:none;}
+.cat_halo .footer_links ul li a:link, .cat_halo .footer_links ul li a:visited {color:#666666; text-decoration:none;}
+.cat_halo .footer_links ul li a:hover, .cat_halo .footer_links ul li a:active {color:#666666; text-decoration:underline;}
+.cat_halo #footer_bottom {color:#666666; border-color:#2f1f02;}
+.cat_halo .copyright {color:#666666;}
+.cat_halo #halo_disclaimer {display:block; color:#aaaaaa;}
+
+/* assassins_creedblips footer */
+.cat_assassins_creed #footer_wrapper {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/content_left.png") repeat-y top left; margin:0 0 0 -4px; padding-top:0; padding-left:3px;}
+.cat_assassins_creed #footer_wrapper-2 {background:transparent url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/content_right.png") repeat-y top right; margin-right:-4px; padding-right:3px;}
+
+.cat_assassins_creed #large_footer {background: #7f100e; border-top:5px solid #3f3000;}
+.cat_assassins_creed #footer_sidebar h5 {color:#111111; background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/footer_horiz_divider.png") repeat-x left top;}
+.cat_assassins_creed #footer_sidebar h5.first {background:none;}
+.cat_assassins_creed .footer_stories h3, .cat_assassins_creed .footer_stories h3 a, .cat_assassins_creed .footer_stories h3 a:link, .cat_assassins_creed .footer_stories h3 a:visited {color:#111111; text-decoration:none;}
+.cat_assassins_creed .footer_stories h3 a:hover, .cat_assassins_creed .footer_stories h3 a:active {color:#111111; text-decoration: underline;}
+.cat_assassins_creed .footer_stories h4, .cat_assassins_creed .footer_stories h4 a, .cat_assassins_creed .footer_stories h4 a:link, .cat_assassins_creed .footer_stories h4 a:visited {color:#111111; text-decoration:none;}
+.cat_assassins_creed .footer_stories h4 a:hover, .cat_assassins_creed .footer_stories h4 a:active {color:#111111; text-decoration: underline;}
+.cat_assassins_creed .footer_stories ol {color:#efefef;}
+.cat_assassins_creed .footer_stories ol a:link, .cat_assassins_creed .footer_stories ol a:visited {color:#efefef; text-decoration:none;}
+.cat_assassins_creed .footer_stories ol a:hover, .cat_assassins_creed .footer_stories ol a:active {color:#efefef; text-decoration:underline;}
+.cat_assassins_creed .footer_links ul li {background:url("http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/footer_links_divider.png") no-repeat 100% 55%;}
+.cat_assassins_creed .footer_links ul li.last {background:none;}
+.cat_assassins_creed .footer_links ul li a:link, .cat_assassins_creed .footer_links ul li a:visited {color:#efefef; text-decoration:none;}
+.cat_assassins_creed .footer_links ul li a:hover, .cat_assassins_creed .footer_links ul li a:active {color:#efefef; text-decoration:underline;}
+.cat_assassins_creed #footer_bottom {color:#666666; border-color:#3f3000;}
+.cat_assassins_creed .copyright {color:#666666;}
+.cat_assassins_creed #assassins_creed_disclaimer {display:none;}
+
+.widget-meta a {color: #666; background: url("http://images.dailyradar.com/media/img/gamerblips/voting/link_box.gif");}
+.widget-meta a:hover {color:#666; background: url("http://images.dailyradar.com/media/img/gamerblips/voting/link_box_light.gif");}
+.vote-count {color: #4fac1b;}
+.most-widget-link a {color:#4fac1b; text-decoration:none;}
+.most-widget-link a:hover, .most-widget-link a:active {color:#4fac1b; text-decoration:underline;}
+.most-widget-link-selected {background-color: #4fac1b;color: #fff;}
+.most-widget-link-selected a, .most-widget-link-selected a:visited {color: #fff; text-decoration:none;}
+.most-widget-link-selected a:hover, .most-widget-link-selected a:active {color:#fff;}
+
+.cat_halo .widget-meta a {background:url("http://images.dailyradar.com/media/img/gamerblips/voting/link_box.gif");}
+.cat_halo .widget-meta a:hover { background: url("http://images.dailyradar.com/media/img/gamerblips/voting/link_box.gif");}
+
+.cat_assassins_creed .widget-meta a {background:url("http://images.dailyradar.com/media/img/gamerblips/voting/link_box.gif");}
+.cat_assassins_creed .widget-meta a:hover { background: url("http://images.dailyradar.com/media/img/gamerblips/voting/link_box.gif");}
+
+.voteUpSelected, .voteUp {background: url("http://images.dailyradar.com/media/img/gamerblips/voting/up_icon_sprite.gif") no-repeat 0 1px;}
+.voteUp:hover {background: url("http://images.dailyradar.com/media/img/gamerblips/voting/up_icon_sprite.gif") no-repeat 0 -15px;}
+.voteDown, .voteDownSelected {background: url("http://images.dailyradar.com/media/img/gamerblips/voting/down_icon_sprite.gif") no-repeat 0 -16px;}
+.voteDown:hover {background: url("http://images.dailyradar.com/media/img/gamerblips/voting/down_icon_sprite.gif") no-repeat 0 0;}
+
+.cat_halo .voteUpSelected, .cat_halo .voteUp {width:14px; height:16px; background: url("http://images.dailyradar.com/media/img/gamerblips/voting/up_icon_sprite.gif") no-repeat 0 1px;}
+.cat_halo .voteUp:hover {background: url("http://images.dailyradar.com/media/img/gamerblips/voting/up_icon_sprite.gif") no-repeat 0 -15px;}
+.cat_halo .voteDownSelected, .cat_halo .voteDown {width:14px; height:16px; background: url("http://images.dailyradar.com/media/img/gamerblips/voting/down_icon_sprite.gif") no-repeat 0 -16px;}
+.cat_halo .voteDown:hover {background: url("http://images.dailyradar.com/media/img/gamerblips/voting/down_icon_sprite.gif") no-repeat 0 0;}
+
+.cat_assassins_creed .voteUpSelected, .cat_assassins_creed .voteUp {width:14px; height:16px; background: url("http://images.dailyradar.com/media/img/gamerblips/voting/up_icon_sprite.gif") no-repeat 0 1px;}
+.cat_assassins_creed .voteUp:hover {background: url("http://images.dailyradar.com/media/img/gamerblips/voting/up_icon_sprite.gif") no-repeat 0 -15px;}
+.cat_assassins_creed .voteDownSelected, .cat_assassins_creed .voteDown {width:14px; height:16px; background: url("http://images.dailyradar.com/media/img/gamerblips/voting/down_icon_sprite.gif") no-repeat 0 -16px;}
+.cat_assassins_creed .voteDown:hover {background: url("http://images.dailyradar.com/media/img/gamerblips/voting/down_icon_sprite.gif") no-repeat 0 0;}
+
+.voteUpPost {background: url("http://images.dailyradar.com/media/img/gamerblips/voting/up_light.gif") no-repeat 0 0;}
+.voteUpPost:hover {background: url("http://images.dailyradar.com/media/img/gamerblips/voting/up_clean.gif") no-repeat 0 -15px;}
+
+.yui-button {background:#358f03 url("http://images.dailyradar.com/media/img/gamerblips/bg/button.gif") left center;border-color: #CDCDCD;}
+.yui-button .first-child {border-color:#CDCDCD;}
+.yui-button button, .yui-button a {color: #eeeeee;border:1px solid #ccc;}
+.jsButton a, .jsButton a:visited {color: #eeeeee;}
+input.submit:hover {border-color: #80abd5;background-color:#FFD523;}
+input.submit {color: #fff;background:#358f03 url("http://images.dailyradar.com/media/img/gamerblips/bg/button.gif") left center;border-color:#CDCDCD;}
+input.submit:active {border: 1px solid #80abd5;border-top-color: #CDCDCD;border-left-color: #CDCDCD;}
+.yui-button-hover, .yui-button-hover .first-child {border-color:#efd508;}
+.yui-button-hover button, .yui-button-hover a, .yui-button-hover a:hover {color:#ffffff;border-color:#efd508;}
+
+.cat_halo .yui-button {background:#cdcdcd url(http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/button.gif) left center; border-color:#d4c67f;}
+.cat_halo .yui-button .first-child {border-color:#d4c67f;}
+.cat_halo .yui-button button, .cat_halo .yui-button a {color:#d4b81e; border:1px solid #d4c67f;}
+.cat_halo .jsButton a, .cat_halo .jsButton a:visited {color:#d4b81e;}
+.cat_halo input.submit:hover {border-color:#86856d; background-color:#dedede;}
+.cat_halo input.submit {color:#d4b81e;background:#cdcdcd url(http://images.dailyradar.com/media/img/gamerblips/bg/cat_halo/button.gif) left center;border-color:#d4c67f;}
+.cat_halo input.submit:active {border: 1px solid #86856d;border-top-color: #CDCDCD;border-left-color: #CDCDCD;}
+.cat_halo .yui-button-hover, .cat_halo .yui-button-hover .first-child {border-color:#86856d;}
+.cat_halo .yui-button-hover button, .cat_halo .yui-button-hover a, .cat_halo .yui-button-hover a:hover {color:#F3D322;border-color:#86856d;}
+
+.cat_assassins_creed .yui-button {background:#cdcdcd url(http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/button.gif) left center; border-color:#8B111C;}
+.cat_assassins_creed .yui-button .first-child {border-color:#8B111C;}
+.cat_assassins_creed .yui-button button, .cat_assassins_creed .yui-button a {color:#efefef; border:1px solid #8B111C;}
+.cat_assassins_creed .jsButton a, .cat_assassins_creed .jsButton a:visited {color:#efefef;}
+.cat_assassins_creed input.submit:hover {border-color:#555555; background-color:#dedede;}
+.cat_assassins_creed input.submit {color:#CF192D;background:#cdcdcd url(http://images.dailyradar.com/media/img/gamerblips/bg/cat_assassins_creed/button.gif) left center;border-color:#8B111C;}
+.cat_assassins_creed input.submit:active {border: 1px solid #CF192D;border-top-color: #CDCDCD;border-left-color: #CDCDCD;}
+.cat_assassins_creed .yui-button-hover, .cat_assassins_creed .yui-button-hover .first-child {border-color:#CF192D;}
+.cat_assassins_creed .yui-button-hover button, .cat_assassins_creed .yui-button-hover a, .cat_assassins_creed .yui-button-hover a:hover {color:#ffffff;border-color:#CF192D;}
+
+/* blue */
+
+a.helpText, #acContainer .yui-ac-content {color: #003990;}
+#acContainer .yui-ac-content a {color: #003990}
+.autoCompleteHighlight {background-color: #003990;}
+#tagFindContainer .yui-ac-content, #tagFindContainerSearch .yui-ac-content {color: #003990;}
+#tagFindContainer .yui-ac-content a, #tagFindContainerSearch .yui-ac-content a {color: #003990}
+.selectedPick, .nonPick:hover {border: 1px solid #003990;}
+.primaryColor {color: #003990}
+.moduleMenuItem h2 {color: #003990;}
+.selectedSeriesPick, .nonSeriesPick:hover, tr.rankings-self {border: 1px solid #003990;}
+.scoreboard-week div.weekday {background-color: #003990;}
+.yui-calendar td.calcell a {color:#003990;}
+.yui-calendar td.calcell.today {border:1px solid #003990;}
+.yui-radio-button-checked, .yui-checkbox-button-checked, .yui-radio-button-checked .first-child, .yui-checkbox-button-checked .first-child {border-color:#003990;}
+#add_module.yui-panel .hd, #filter_panel.yui-panel .hd, #region_panel.yui-panel .hd, .media-panel.yui-panel .hd {background-color:#003990;}
+table.stats th {background-color: #003990;}
+table.odds .selectedPick, table.odds .nonPick:hover {border: 1px solid #003990;}
+
+/* orange */
+
+h1 {border-bottom:2px solid #003990; color:#003990;}
+table.h1table { border:none;border-bottom:2px solid #666666;}
+h1 a:hover, h1 a.external:hover {color: #222222;}
+
+.cat_halo h1 {border-bottom:2px solid #86856d; color:#86856d;}
+.cat_halo table.h1table { border:none; border-bottom:2px solid #86856d;}
+
+.cat_assassins_creed h1 {border-bottom:2px solid #555555; color:#555555;}
+.cat_assassins_creed table.h1table { border:none; border-bottom:2px solid #555555;}
+
+h5.selected {color: #003990;}
+a:hover img.thumb, a:hover img.icon, .preview-photo a:hover img {border: 1px #003990 solid;}
+a img.thumb-winner, a img.icon-winner, .avatar-winner {border: 2px #003990 dotted;}
+.error {color: #003990;border: 1px dashed #003990;}
+.secondaryColor {color: #003990}
+#south {color: #003990;}
+div.poll-result-bar {background-color: #003990;}
+div.thumb-grid a:hover img  {border: 1px #003990 solid;}
+
+
+
+ul.tracker li {background: url(http://images.dailyradar.com/media/img/revolver/bullet_link.png) 0 5px no-repeat;}
+ul.tracker li a:link {color:#003990; text-decoration:none;}
+ul.tracker li a:visited {color:#6F4C4C; text-decoration:none}
+ul.tracker li a:hover {background-color: #003990; color:#fff; text-decoration:none}
+
+#ticker a {color:#ff9900;}
+
+.cat_halo #ticker a {color:#86856d;}
+
+.cat_assassins_creed #ticker a {color:#555555;}
+
+
+
+
